@@ -14,7 +14,17 @@ function Header() {
       <div className={styles.basketBox}>
         <RiShoppingBagLine className={`${styles.basketIcon} ${styles.icon}`} />
       </div>
+      <FilterableSection />
     </header>
+  );
+}
+
+function FilterableSection() {
+  return (
+    <section className={styles.filterableSection}>
+      <a className={styles.discoverLink}>Discover</a>
+      <a className={styles.shopLink}>Shop</a>
+    </section>
   );
 }
 
