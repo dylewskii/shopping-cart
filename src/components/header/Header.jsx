@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styles from "./Header.module.css";
 import { IoSearch } from "react-icons/io5";
 import { RiShoppingBagLine } from "react-icons/ri";
@@ -20,10 +21,25 @@ function Header() {
 }
 
 function FilterableSection() {
+  const [selectedLink, setSelectedLink] = useState("discover");
   return (
     <section className={styles.filterableSection}>
-      <a className={styles.discoverLink}>Discover</a>
-      <a className={styles.shopLink}>Shop</a>
+      <a
+        className={`${styles.discoverLink} ${
+          selectedLink === "discover" ? styles.selectedLink : ""
+        }`}
+        onClick={() => setSelectedLink("discover")}
+      >
+        Discover
+      </a>
+      <a
+        className={`${styles.shopLink} ${
+          selectedLink === "shop" ? styles.selectedLink : ""
+        }`}
+        onClick={() => setSelectedLink("shop")}
+      >
+        Shop
+      </a>
     </section>
   );
 }
