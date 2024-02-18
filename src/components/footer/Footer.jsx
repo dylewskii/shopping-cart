@@ -6,6 +6,9 @@ function Footer() {
 
   return (
     <footer>
+      <div className={styles.appBox}>
+        <h5>Continue Shopping With Our Brand New App</h5>
+      </div>
       <div className={styles.glossaryBox}>
         <ul>
           <li>
