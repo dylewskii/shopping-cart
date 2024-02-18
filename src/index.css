@@ -59,6 +59,25 @@
   src: url("../src/assets/fonts/Lato-Light.ttf");
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "heading-bold";
+}
+
+p,
+a,
+label,
+input,
+span,
+img,
+::placeholder {
+  font-family: "regular";
+}
+
 /* ------------------- RESET ------------------- */
 *,
 *::before,
