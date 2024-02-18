@@ -1,4 +1,5 @@
 import styles from "./Footer.module.css";
+import SignUp from "./SignUp";
 
 function Footer() {
   let currYear = new Date();
@@ -6,6 +7,7 @@ function Footer() {
 
   return (
     <footer>
+      <SignUp />
       <div className={styles.appBox}>
         <h5>Continue Shopping With Our Brand New App</h5>
       </div>
