@@ -95,10 +95,6 @@ a {
   text-decoration: none;
 }
 
-a:visited {
-  color: var(--clr-active);
-}
-
 /* ------------------- BASE ------------------- */
 
 a,
@@ -110,10 +106,6 @@ svg {
 
 a {
   cursor: pointer;
-}
-
-a:hover {
-  color: var(--clr-active);
 }
 
 button {
