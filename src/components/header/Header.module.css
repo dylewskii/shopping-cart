@@ -6,7 +6,6 @@ header {
 }
 
 .headingBox > h1 {
-  font-family: "heading-bold";
   font-size: 1rem;
   font-size: clamp(1rem, 0.6rem + 2vw, 3rem);
   text-decoration: underline;
@@ -49,7 +48,7 @@ header {
 .filterableSection a {
   position: relative;
   box-sizing: border-box;
-  border-bottom: 3px solid transparent; /* Invisible border */
+  border-bottom: 3px solid transparent; /* invisible border */
   transition: border-bottom-color 0.3s ease-in-out;
 }
 
