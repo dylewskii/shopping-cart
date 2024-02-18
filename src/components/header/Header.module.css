@@ -45,6 +45,40 @@ header {
   font-size: clamp(0.8rem, 0.3rem + 2vw, 1rem);
 }
 
+.filterableSection a {
+  position: relative;
+  box-sizing: border-box;
+  border-bottom: 3px solid transparent; /* Invisible border */
+  transition: border-bottom-color 0.3s ease-in-out;
+}
+
+.filterableSection a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--clr-black);
+
+  transform: scale(0, 1);
+  transform-origin: 0% 100%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.filterableSection a:hover::after {
+  transform: scale(1, 1);
+}
+
+.filterableSection a.selectedLink {
+  border-bottom: 3px solid var(--clr-black);
+}
+
+.filterableSection a.selectedLink::after {
+  /* prevents the ::after pseudo-element from being affected on hover */
+  content: none;
+}
+
 @media (min-width: 800px) {
   .searchBox,
   .basketBox {
