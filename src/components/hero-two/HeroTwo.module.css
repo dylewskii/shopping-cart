@@ -1,8 +1,23 @@
 .heroTwo {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 0.3fr;
   background-color: var(--clr-white);
   padding: 1rem;
+}
+
+.heroTwoImg {
+  grid-column: span 2;
+  grid-row: 1;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroTwoHeader {
+  grid-column: span 2;
+  grid-row: 2;
 }
 
 .heroTwo h2 {
@@ -10,4 +25,16 @@
   font-size: clamp(1rem, 1rem + 2vw, 3rem);
   text-transform: uppercase;
   margin-bottom: 1rem;
+}
+
+@media (min-width: 800px) {
+  .heroTwoImg {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+
+  .heroTwoHeader {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+  }
 }
