@@ -1,0 +1,13 @@
+.heroTwo {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--clr-white);
+  padding: 1rem;
+}
+
+.heroTwo h2 {
+  font-size: 2rem;
+  font-size: clamp(1rem, 1rem + 2vw, 3rem);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
