@@ -4,6 +4,7 @@ import Hero from "./components/hero/Hero";
 import ShopBanner from "./components/shop-banner/ShopBanner";
 import HeroTwo from "./components/hero-two/HeroTwo";
 import DiscoverBanner from "./components/discover-banner/DiscoverBanner";
+import Footer from "./components/footer/Footer";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <ShopBanner />
       <HeroTwo />
       <DiscoverBanner />
+      <Footer />
     </>
   );
 }
