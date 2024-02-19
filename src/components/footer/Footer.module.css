@@ -1,17 +1,123 @@
 footer {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 0.2fr;
+  padding: 1rem;
 }
 
 .footerTop {
   grid-column: span 2;
+  grid-row: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
   margin-bottom: 2rem;
+}
+
+.appBox {
+  grid-column: span 2;
+  grid-row: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: start;
+  padding: 1rem 0;
+}
+
+.appBox h5 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.glossaryBox {
+  grid-column: span 2;
+  grid-row: 2;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 0.5rem 0;
+}
+
+.glossaryBox ul,
+.glossaryBox li,
+.glossaryBox li a {
+  width: 100%;
+}
+
+.glossaryBox li a {
+  display: block;
+  font-family: "heading-bold";
+  padding: 1.25rem 0;
+  border-top: 1.5px solid var(--clr-black);
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.glossaryBox li:last-child a {
+  border-bottom: 1.5px solid var(--clr-black);
 }
 
 .footerBottom {
   grid-column: span 2;
+  grid-row: 2;
+  color: var(--text-tertiary);
+}
+
+.footerBottom > div {
+  margin-bottom: 2rem;
+}
+
+.footerBottom > div:last-child {
+  margin-bottom: 0;
 }
 
 .appBadge {
   cursor: pointer;
+  padding-left: 1rem;
+}
+
+@media (max-width: 490px) {
+  .appBox {
+    text-align: center;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 600px) {
+  .appBox {
+    align-items: center;
+  }
+
+  .appBox {
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .appBadge {
+    grid-column: 1;
+    grid-row: 2;
+    padding-left: 0;
+  }
+
+  .glossaryBox {
+    grid-column: 2;
+    grid-row: span 2;
+    padding-left: 3rem;
+  }
+
+  .glossaryBox ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+  }
+
+  .glossaryBox li a,
+  .glossaryBox li:last-child a {
+    border: none;
+    padding: 0.7rem 0;
+  }
 }
