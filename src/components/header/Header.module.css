@@ -2,7 +2,7 @@ header {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr 1fr;
-  padding: 2rem;
+  padding: 1rem 2rem;
 }
 
 .headingBox {
@@ -21,11 +21,13 @@ header {
 .searchBox {
   display: flex;
   justify-content: flex-start;
+  align-items: center;
 }
 
 .basketBox {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
 }
 
 .icon {
