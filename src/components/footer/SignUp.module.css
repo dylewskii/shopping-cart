@@ -1,0 +1,76 @@
+.signUpBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.signUpBox label {
+  text-transform: uppercase;
+  margin: 10px 0;
+}
+
+.signUpInput {
+  border: none;
+  border-bottom: 1px solid var(--clr-black);
+  font-size: 2rem;
+  width: 100%;
+  padding-right: 3rem;
+}
+
+.signUpInput::placeholder {
+  font-family: "heading-bold";
+  font-size: 2rem;
+  color: black;
+}
+
+.signUpInput:focus {
+  outline: none;
+}
+
+.signUpInput:focus::placeholder {
+  color: var(--clr-darker-grey);
+}
+
+.inputSpan {
+  position: relative;
+}
+
+.icon {
+  position: absolute;
+  right: 3%;
+  top: 20%;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.signUpBox p {
+  color: var(--clr-darker-grey);
+  margin-top: 1rem;
+}
+
+.privacyLink {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+@media (min-width: 600px) {
+  .signUpBox {
+    justify-content: flex-start;
+    padding: 1rem;
+  }
+
+  .signUpInput {
+    padding-right: 6rem;
+  }
+
+  .signUpInput::placeholder,
+  .signUpInput {
+    font-size: 4rem;
+  }
+
+  .icon {
+    top: 20%;
+    font-size: 3rem;
+  }
+}
