@@ -6,6 +6,7 @@
   --clr-cream: hsl(26, 28%, 89%);
   --clr-grey: hsl(45, 7%, 78%);
   --clr-dark-grey: hsl(43, 4%, 68%);
+  --clr-darker-grey: hsl(0, 0%, 50%);
 
   /* background */
   --clr-primary: var(--clr-cream);
@@ -13,6 +14,7 @@
   /* text */
   --text-primary: var(--clr-black);
   --text-secondary: var(--clr-white);
+  --text-tertiary: var(--clr-darker-grey);
   /* accent/states */
   --clr-active: var(--clr-dark-grey);
 
