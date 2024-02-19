@@ -5,6 +5,12 @@ header {
   padding: 2rem;
 }
 
+.headingBox {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+
 .headingBox > h1 {
   font-size: 1rem;
   font-size: clamp(1rem, 0.6rem + 2vw, 3rem);
@@ -23,7 +29,7 @@ header {
 }
 
 .icon {
-  font-size: clamp(1.4rem, 0.6rem + 2vw, 3rem);
+  font-size: clamp(1.4rem, 0.6rem + 2vw, 2rem);
   cursor: pointer;
 }
 
