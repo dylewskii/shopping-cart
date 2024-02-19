@@ -21,6 +21,7 @@ footer {
   justify-content: center;
   align-items: center;
   text-align: start;
+  margin-bottom: 2rem;
 }
 
 .appBox h5 {
@@ -46,7 +47,7 @@ footer {
 .glossaryBox li a {
   display: block;
   font-family: "heading-bold";
-  padding: 0 0 1.25rem 0;
+  padding: 1.25rem 0;
   border-top: 1.5px solid var(--clr-black);
   cursor: pointer;
   text-transform: uppercase;
@@ -116,5 +117,6 @@ footer {
   .glossaryBox li a,
   .glossaryBox li:last-child a {
     border: none;
+    padding: 10px 0 1.3rem 0;
   }
 }
