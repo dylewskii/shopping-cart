@@ -5,6 +5,7 @@ import ShopBanner from "./components/shop-banner/ShopBanner";
 import HeroTwo from "./components/hero-two/HeroTwo";
 import DiscoverBanner from "./components/discover-banner/DiscoverBanner";
 import Footer from "./components/footer/Footer";
+import SignUp from "./components/sign-up/SignUp";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <ShopBanner />
       <HeroTwo />
       <DiscoverBanner />
+      <SignUp />
       <Footer />
     </>
   );
