@@ -1,0 +1,17 @@
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.footerTop {
+  grid-column: span 2;
+  margin-bottom: 2rem;
+}
+
+.footerBottom {
+  grid-column: span 2;
+}
+
+.appBadge {
+  cursor: pointer;
+}
