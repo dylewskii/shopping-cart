@@ -40,7 +40,7 @@ function Footer() {
           <h6>DISCLAIMER</h6>
           <p>
             Please be aware that our efforts to maintain accessibility and
-            usability are ongoing. While we strive to make the Website as
+            usability are ongoing. While we strive to make the website as
             accessible as possible some issues can be encountered by different
             assistive technology as the range of assistive technology is wide
             and varied.
@@ -50,8 +50,8 @@ function Footer() {
           <h6>CONTACT US</h6>
           <p>
             If, at any time, you have specific questions or concerns that you
-            would like to raise with our team, please contact us at
-            contact@lorempisum.com, , +44 123 456 789 12.
+            would like to raise, please get in touch with us at
+            contact@lorempisum.com or +44 123 456 789 12.
           </p>
         </div>
         <div className={styles.copyrightBox}>
