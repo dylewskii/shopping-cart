@@ -1,5 +1,4 @@
 import styles from "./Footer.module.css";
-import SignUp from "./SignUp";
 import iosBadge from "../../../public/badges/Download_on_the_App_Store_Badge.svg";
 
 function Footer() {
@@ -9,7 +8,6 @@ function Footer() {
   return (
     <footer>
       <div className={styles.footerTop}>
-        <SignUp />
         <div className={styles.appBox}>
           <h5>Continue Shopping With Our Brand New App</h5>
           <img className={styles.appBadge} src={iosBadge}></img>
