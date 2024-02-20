@@ -1,0 +1,29 @@
+.carouselBanner {
+  background-color: var(--clr-primary);
+  padding: 2rem;
+}
+
+/* header */
+.carouselBannerHeader {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.carouselBannerHeader h3,
+.carouselBanner a {
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.carouselBannerHeader a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* items */
+
+.carouselBannerItems {
+  display: flex;
+  gap: 3rem;
+}
