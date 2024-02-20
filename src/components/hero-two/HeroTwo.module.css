@@ -4,7 +4,7 @@
   grid-template-rows: 1fr 0.3fr;
   background-color: var(--clr-black);
   color: var(--text-secondary);
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .heroTwoImg {
