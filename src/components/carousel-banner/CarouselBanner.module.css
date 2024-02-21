@@ -22,8 +22,20 @@
 }
 
 /* items */
-
 .carouselBannerItems {
   display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
   gap: 3rem;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.carouselBannerItems > * {
+  flex: 0 0 150px; /* grow / shrink / basis */
+}
+
+.carouselBannerItems::-webkit-scrollbar {
+  display: none;
 }
