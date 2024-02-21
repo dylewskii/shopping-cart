@@ -6,7 +6,7 @@ function ProductCard({ children }) {
 }
 
 ProductCard.ProductImage = ({ src, alt }) => {
-  return <img className={styles.cardImages} src={src} alt={alt} />;
+  return <img className={styles.cardImage} src={src} alt={alt} />;
 };
 
 ProductCard.Title = ({ children }) => {
