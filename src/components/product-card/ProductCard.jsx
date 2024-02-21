@@ -6,7 +6,11 @@ function ProductCard({ children }) {
 }
 
 ProductCard.ProductImage = ({ src, alt }) => {
-  return <img className={styles.cardImage} src={src} alt={alt} />;
+  return (
+    <div className={styles.cardImageWrapper}>
+      <img className={styles.cardImage} src={src} alt={alt} loading="lazy" />
+    </div>
+  );
 };
 
 ProductCard.Title = ({ children }) => {
