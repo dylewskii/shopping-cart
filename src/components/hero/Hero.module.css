@@ -30,3 +30,13 @@ article {
   font-family: "regular";
   padding-right: 5rem;
 }
+
+@media (max-width: 500px) {
+  .contentWrapper h2 {
+    text-align: center;
+  }
+  .contentWrapper p {
+    padding-right: 0;
+    text-align: center;
+  }
+}
