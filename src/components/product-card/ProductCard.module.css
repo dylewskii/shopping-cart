@@ -1,14 +1,27 @@
 .card {
   display: flex;
   flex-direction: column;
-  min-width: 175px;
-  overflow: hidden;
+  min-width: 200px;
   cursor: pointer;
 }
 
+.cardImageWrapper {
+  width: 100%;
+  height: 250px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
 .cardImage {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   margin-bottom: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .cardImage {
+  transform: scale(105%);
 }
 
 .card > p {
