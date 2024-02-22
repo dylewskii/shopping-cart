@@ -12,9 +12,16 @@ function HeroTwo() {
       <div className={styles.heroTwoHeader}>
         <h2>Make a Statement With These Pieces</h2>
         <p>
-          This curation of pieces literally makes a statement, whether it be a
-          bold fashion sense or eye-catching detail. Elevate your outfit with a
-          new color, pattern or silhouette.
+          Our collection is a testament to luxury, meticulously selected to not
+          just follow but set new trends in the realm of high-end streetwear.
+          Each piece, crafted from the finest materials, is designed to make a
+          statement—be it through a daring fashion choice or captivating detail.
+        </p>
+        <br></br>
+        <p>
+          Elevate your wardrobe with our unique selection of colors, patterns,
+          and silhouettes, each curated to offer an unparalleled sartorial
+          experience.
         </p>
       </div>
     </section>
