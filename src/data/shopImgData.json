@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "alt": "Nike Air Force 1 Black Shoe",
+    "name": "Nike Air Force 1 Black",
+    "price": "100.00",
+    "src": {
+      "left": "src/assets/images/shoes/air-force-1-black-1.webp",
+      "right": "src/assets/images/shoes/air-force-1-black-2.webp",
+      "front": "src/assets/images/shoes/air-force-1-black-3.webp"
+    }
+  },
+  {
+    "id": 2,
+    "alt": "Nike Air Force 1 White Shoe",
+    "name": "Nike Air Force 1 White",
+    "price": "100.00",
+    "src": {
+      "left": "src/assets/images/shoes/air-force-1-white-1.webp",
+      "right": "src/assets/images/shoes/air-force-1-white-2.webp",
+      "front": "src/assets/images/shoes/air-force-1-white-3.webp"
+    }
+  },
+  {
+    "id": 3,
+    "alt": "Nike Dunk Low Green Shoe",
+    "name": "Nike Dunk Low",
+    "price": "90.00",
+    "src": {
+      "left": "src/assets/images/shoes/dunk-low-green-1.webp",
+      "right": "src/assets/images/shoes/dunk-low-green-2.webp",
+      "front": "src/assets/images/shoes/dunk-low-green-3.webp"
+    }
+  },
+  {
+    "id": 4,
+    "alt": "Nike V2K White Shoe",
+    "name": "Nike V2K",
+    "price": "120.00",
+    "src": {
+      "left": "src/assets/images/shoes/v2k-white-1.webp",
+      "right": "src/assets/images/shoes/v2k-white-2.webp",
+      "front": "src/assets/images/shoes/v2k-white-3.webp"
+    }
+  }
+]
