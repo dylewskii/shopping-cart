@@ -21,7 +21,7 @@ function Header() {
 }
 
 function FilterableSection() {
-  const [selectedLink, setSelectedLink] = useState("discover");
+  const [selectedLink, setSelectedLink] = useState("");
   return (
     <section className={styles.filterableSection}>
       <a
