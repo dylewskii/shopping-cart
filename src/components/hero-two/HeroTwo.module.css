@@ -28,6 +28,16 @@
   margin-bottom: 1rem;
 }
 
+@media (max-width: 500px) {
+  .heroTwo {
+    padding: 0;
+  }
+
+  .heroTwoHeader {
+    padding: 1rem 1rem 2rem 1rem;
+  }
+}
+
 @media (min-width: 800px) {
   .heroTwoImg {
     grid-column: 2;
@@ -37,5 +47,6 @@
   .heroTwoHeader {
     grid-column: 1;
     grid-row: 1 / span 2;
+    padding: 0 2rem 0 0;
   }
 }
