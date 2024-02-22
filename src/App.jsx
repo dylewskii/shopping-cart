@@ -9,7 +9,7 @@ import ProductCard from "./components/product-card/ProductCard";
 import Footer from "./components/footer/Footer";
 import SignUp from "./components/sign-up/SignUp";
 // context
-import DataContext from "./context/DataContext";
+import DataContext from "./context/PageContext";
 // image data
 import shopImgData from "./data/shopImgData.json";
 import discoverImgData from "./data/discoverImgData.json";

@@ -3,7 +3,7 @@ import { createContext, useState } from "react";
 
 const PageContext = createContext("");
 
-export const DataProvider = ({ children }) => {
+export const PageProvider = ({ children }) => {
   const [selectedPage, setSelectedPage] = useState("");
 
   return (
