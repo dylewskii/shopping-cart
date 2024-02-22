@@ -1,11 +1,12 @@
 import styles from "./HeroTwo.module.css";
+import heroTwoImg from "../../assets/images/homepage/rocky-twins-touch.webp";
 
 function HeroTwo() {
   return (
     <section className={styles.heroTwo}>
       <div className={styles.heroTwoImg}>
         <div className={styles.heroTwoImgWrapper}>
-          <img src="" alt="Discover the Latest Fashion Pieces" />
+          <img src={heroTwoImg} alt="Two men stood touching large rocks" />
         </div>
       </div>
       <div className={styles.heroTwoHeader}>
