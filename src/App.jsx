@@ -8,6 +8,8 @@ import CarouselBanner from "./components/carousel-banner/CarouselBanner";
 import ProductCard from "./components/product-card/ProductCard";
 import Footer from "./components/footer/Footer";
 import SignUp from "./components/sign-up/SignUp";
+// context
+import DataContext from "./context/DataContext";
 // image data
 import shopImgData from "./data/shopImgData.json";
 import discoverImgData from "./data/discoverImgData.json";
@@ -20,7 +22,6 @@ function App() {
       {/* ------ Shop Banner ------ */}
       <CarouselBanner>
         <CarouselBanner.Header>Shop Now</CarouselBanner.Header>
-        {/* ------ Banner Items ------ */}
         <CarouselBanner.Items>
           {shopImgData.map((shopItem) => (
             <ProductCard key={shopItem.id}>
