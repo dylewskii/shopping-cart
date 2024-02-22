@@ -1,6 +1,6 @@
 .carouselBanner {
   background-color: var(--clr-primary);
-  padding: 2rem;
+  padding: 1rem;
 }
 
 /* header */
@@ -41,6 +41,10 @@
 }
 
 @media (min-width: 500px) {
+  .carouselBanner {
+    padding: 2rem;
+  }
+
   .carouselBannerItems {
     gap: 2.5rem;
   }
