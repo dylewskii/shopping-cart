@@ -1,11 +1,15 @@
 import styles from "./Hero.module.css";
+import heroImg from "../../assets/images/homepage/rocky-twins-sat.webp";
 
 function Hero() {
   return (
     <article>
       <div className={styles.imgSection}>
         <div className={styles.imgWrapper}>
-          <img src="" alt="new season's clothing" />
+          <img
+            src={heroImg}
+            alt="two men sitting on chairs in a rocky desert"
+          />
         </div>
       </div>
       <section className={styles.contentSection}>
