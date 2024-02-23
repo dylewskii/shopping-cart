@@ -13,8 +13,7 @@ export const PageProvider = ({ children }) => {
   );
 };
 
-PageProvider.propTypes = {
-  children: PropTypes.node,
-};
+// Prop Types
+PageProvider.propTypes = { children: PropTypes.node };
 
 export default PageContext;
