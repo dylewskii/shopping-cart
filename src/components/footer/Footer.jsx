@@ -2,8 +2,7 @@ import styles from "./Footer.module.css";
 import iosBadge from "../../../public/badges/Download_on_the_App_Store_Badge.svg";
 
 function Footer() {
-  let currYear = new Date();
-  currYear = currYear.getFullYear();
+  const currYear = new Date().getFullYear();
 
   return (
     <footer>
