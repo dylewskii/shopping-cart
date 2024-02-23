@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+import PropTypes from "prop-types";
 import styles from "./CarouselBanner.module.css";
 
 function CarouselBanner({ children }) {
@@ -16,6 +16,18 @@ CarouselBanner.Header = ({ children }) => {
 
 CarouselBanner.Items = ({ children }) => {
   return <div className={styles.carouselBannerItems}>{children}</div>;
+};
+
+CarouselBanner.propTypes = {
+  children: PropTypes.node,
+};
+
+CarouselBanner.Header.propTypes = {
+  children: PropTypes.node,
+};
+
+CarouselBanner.Items.propTypes = {
+  children: PropTypes.node,
 };
 
 CarouselBanner.displayName = "CarouselBanner";
