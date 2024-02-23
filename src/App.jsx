@@ -3,7 +3,7 @@
 // css
 import "./App.css";
 // pages
-import Homepage from "./pages/Homepage";
+import Homepage from "./pages/home-page/Homepage";
 // components
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";

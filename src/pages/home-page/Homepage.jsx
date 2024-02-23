@@ -1,11 +1,11 @@
 // components
-import Hero from "../components/hero/Hero";
-import CarouselBanner from "../components/carousel-banner/CarouselBanner";
-import ProductCard from "../components/product-card/ProductCard";
-import HeroTwo from "../components/hero-two/HeroTwo";
+import Hero from "../../components/hero/Hero";
+import CarouselBanner from "../../components/carousel-banner/CarouselBanner";
+import ProductCard from "../../components/product-card/ProductCard";
+import HeroTwo from "../../components/hero-two/HeroTwo";
 // image data
-import shopImgData from "../data/shopImgData.json";
-import discoverImgData from "../data/discoverImgData.json";
+import shopImgData from "../../data/shopImgData.json";
+import discoverImgData from "../../data/discoverImgData.json";
 
 export default function Homepage() {
   return (
