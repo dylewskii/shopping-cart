@@ -11,7 +11,7 @@ function Hero() {
         <div className={styles.imgWrapper}>
           <img
             src={heroImg}
-            alt="two men sitting on chairs in a rocky desert"
+            alt="Two men sitting on chairs in a rocky desert"
           />
         </div>
       </div>
@@ -19,11 +19,11 @@ function Hero() {
         <div className={styles.contentWrapper}>
           <h2>Introducing the new SS{currYearShort} COLLECTION</h2>
           <p>
-            The Spring/Summer {currYear} collection presents a variety of
-            seasonal pieces that incorporate premium materials sourced from
-            Portugal and Japan; intricate wool knits, garment-dyed finishes, and
-            more. Designed with versatility in mind, each item caters to
-            everyday aesthetics. Available now.
+            The {currYear} Season collection presents a variety of pieces that
+            incorporate premium materials sourced from Portugal and Japan;
+            intricate wool knits, garment-dyed finishes, and more. Designed with
+            versatility in mind, each item caters to everyday aesthetics and is
+            a testament to luxury. Available now.
           </p>
         </div>
       </section>
