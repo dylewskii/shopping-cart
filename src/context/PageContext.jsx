@@ -1,5 +1,5 @@
-/* eslint-disable react/prop-types */
 import { createContext, useState } from "react";
+import PropTypes from "prop-types";
 
 const PageContext = createContext("");
 
@@ -11,6 +11,10 @@ export const PageProvider = ({ children }) => {
       {children}
     </PageContext.Provider>
   );
+};
+
+PageProvider.propTypes = {
+  children: PropTypes.node,
 };
 
 export default PageContext;
