@@ -4,6 +4,7 @@
 import "./App.css";
 // pages
 import HomePage from "./pages/home-page/HomePage";
+import ShopPage from "./pages/shop-page/ShopPage";
 // components
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
