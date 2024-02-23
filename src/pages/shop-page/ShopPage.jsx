@@ -1,9 +1,13 @@
-import styles from "./ShopPage.module.css";
+import ShopContent from "../../components/shop-content/ShopContent";
 
 export default function ShopPage() {
   return (
     <>
-      <section className={styles.shopPageSection}></section>
+      <ShopContent>
+        <ShopContent.Title>New Arrivals</ShopContent.Title>
+        <ShopContent.SideBar />
+        <ShopContent.Products></ShopContent.Products>
+      </ShopContent>
     </>
   );
 }
