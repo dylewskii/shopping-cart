@@ -7,7 +7,7 @@ import HeroTwo from "../../components/hero-two/HeroTwo";
 import shopImgData from "../../data/shopImgData.json";
 import discoverImgData from "../../data/discoverImgData.json";
 
-export default function Homepage() {
+export default function HomePage() {
   return (
     <>
       <Hero />

@@ -3,7 +3,7 @@
 // css
 import "./App.css";
 // pages
-import Homepage from "./pages/home-page/Homepage";
+import HomePage from "./pages/home-page/HomePage";
 // components
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
@@ -13,7 +13,7 @@ function App() {
   return (
     <>
       <Header />
-      <Homepage />
+      <HomePage />
       <SignUp />
       <Footer />
     </>
