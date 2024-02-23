@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+import PropTypes from "prop-types";
 import styles from "./ProductCard.module.css";
 
 function ProductCard({ children }) {
@@ -25,6 +25,17 @@ ProductCard.Price = ({ children }) => {
   return <p className={styles.cardPrice}>{children}</p>;
 };
 
+// --- Prop Types ---
+ProductCard.propTypes = { children: PropTypes.node };
+ProductCard.ProductImage.propTypes = {
+  src: PropTypes.string,
+  alt: PropTypes.string,
+};
+ProductCard.Title.propTypes = { children: PropTypes.node };
+ProductCard.Description.propTypes = { children: PropTypes.node };
+ProductCard.Price.propTypes = { children: PropTypes.node };
+
+// --- Display Names ---
 ProductCard.ProductImage.displayName = "ProductCard.ProductImage";
 ProductCard.Title.displayName = "ProductCard.Title";
 ProductCard.Description.displayName = "ProductCard.Description";
