@@ -1,7 +1,9 @@
+import styles from "./ShopPage.module.css";
+
 export default function ShopPage() {
   return (
     <>
-      <div></div>
+      <section className={styles.shopPageSection}></section>
     </>
   );
 }
