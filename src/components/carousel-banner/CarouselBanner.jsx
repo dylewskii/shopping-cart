@@ -18,18 +18,12 @@ CarouselBanner.Items = ({ children }) => {
   return <div className={styles.carouselBannerItems}>{children}</div>;
 };
 
-CarouselBanner.propTypes = {
-  children: PropTypes.node,
-};
+// Prop Types
+CarouselBanner.propTypes = { children: PropTypes.node };
+CarouselBanner.Header.propTypes = { children: PropTypes.node };
+CarouselBanner.Items.propTypes = { children: PropTypes.node };
 
-CarouselBanner.Header.propTypes = {
-  children: PropTypes.node,
-};
-
-CarouselBanner.Items.propTypes = {
-  children: PropTypes.node,
-};
-
+// Display Names
 CarouselBanner.displayName = "CarouselBanner";
 CarouselBanner.Header.displayName = "CarouselBanner.Header";
 CarouselBanner.Items.displayName = "CarouselBanner.Items";
