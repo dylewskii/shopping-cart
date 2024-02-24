@@ -1,4 +1,6 @@
 import ShopContent from "../../components/shop-content/ShopContent";
+import shopImgData from "../../data/shopImgData.json";
+import ProductCard from "../../components/product-card/ProductCard";
 
 export default function ShopPage() {
   return (
@@ -6,7 +8,21 @@ export default function ShopPage() {
       <ShopContent>
         <ShopContent.Title>New Arrivals</ShopContent.Title>
         <ShopContent.SideBar />
-        <ShopContent.Products></ShopContent.Products>
+        <ShopContent.Products>
+          {shopImgData.map((shopItem) => (
+            <ProductCard key={shopItem.id}>
+              <ProductCard.ProductImage
+                src={shopItem.src.left}
+                alt={shopItem.alt}
+              />
+              <ProductCard.Title>{shopItem.brand}</ProductCard.Title>
+              <ProductCard.Description>
+                {shopItem.description} - {shopItem.color}
+              </ProductCard.Description>
+              <ProductCard.Price>£{shopItem.price}</ProductCard.Price>
+            </ProductCard>
+          ))}
+        </ShopContent.Products>
       </ShopContent>
     </>
   );

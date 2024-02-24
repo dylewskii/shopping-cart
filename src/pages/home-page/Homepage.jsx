@@ -21,8 +21,11 @@ export default function HomePage() {
                 src={shopItem.src.left}
                 alt={shopItem.alt}
               />
-              <ProductCard.Title>{shopItem.name}</ProductCard.Title>
-              <ProductCard.Price>{shopItem.price}</ProductCard.Price>
+              <ProductCard.Title>{shopItem.brand}</ProductCard.Title>
+              <ProductCard.Description>
+                {shopItem.description} - {shopItem.color}
+              </ProductCard.Description>
+              <ProductCard.Price>£{shopItem.price}</ProductCard.Price>
             </ProductCard>
           ))}
         </CarouselBanner.Items>
