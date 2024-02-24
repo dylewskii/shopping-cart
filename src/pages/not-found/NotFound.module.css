@@ -1,0 +1,17 @@
+.errorSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+}
+
+.errorTitle {
+  font-size: 5rem;
+  text-transform: uppercase;
+}
+
+.errorDescription {
+  font-size: 2rem;
+  text-align: center;
+}
