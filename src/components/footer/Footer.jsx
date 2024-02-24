@@ -1,4 +1,8 @@
+// react
+import { Link } from "react-router-dom";
+// css
 import styles from "./Footer.module.css";
+// icons
 import iosBadge from "../../../public/badges/Download_on_the_App_Store_Badge.svg";
 
 function Footer() {
@@ -14,22 +18,22 @@ function Footer() {
         <div className={styles.glossaryBox}>
           <ul>
             <li>
-              <a>About Us</a>
+              <Link to="/">About Us</Link>
             </li>
             <li>
-              <a>Shop</a>
+              <Link to="/shop">Shop</Link>
             </li>
             <li>
-              <a>Discover</a>
+              <Link to="/discover">Discover</Link>
             </li>
             <li>
-              <a>Contact</a>
+              <Link to="/">Contact</Link>
             </li>
             <li>
-              <a>Privacy</a>
+              <Link to="/">Privacy</Link>
             </li>
             <li>
-              <a>Terms</a>
+              <Link to="/">Terms</Link>
             </li>
           </ul>
         </div>
