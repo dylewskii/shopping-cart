@@ -1,47 +1,69 @@
+// react
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
+// css
 import styles from "./Header.module.css";
+// icons
 import { IoSearch } from "react-icons/io5";
 import { RiShoppingBagLine } from "react-icons/ri";
 
 function Header() {
+  const [selectedLink, setSelectedLink] = useState("");
+  const handleLinkClick = (link) => setSelectedLink(link);
+
   return (
     <header>
       <div className={styles.searchBox}>
         <IoSearch className={`${styles.searchIcon} ${styles.icon}`} />
       </div>
       <div className={styles.headingBox}>
-        <h1>LOREMIPSUM</h1>
+        <h1>
+          <Link to="/" onClick={() => handleLinkClick("home")}>
+            LOREMIPSUM
+          </Link>
+        </h1>
       </div>
       <div className={styles.basketBox}>
         <RiShoppingBagLine className={`${styles.basketIcon} ${styles.icon}`} />
       </div>
-      <FilterableSection />
+      <FilterableSection
+        selectedLink={selectedLink}
+        handleLinkClick={handleLinkClick}
+      />
     </header>
   );
 }
 
-function FilterableSection() {
-  const [selectedLink, setSelectedLink] = useState("");
+function FilterableSection({ selectedLink, handleLinkClick }) {
   return (
     <section className={styles.filterableSection}>
-      <a
+      <Link
+        to="/discover"
         className={`${styles.discoverLink} ${
           selectedLink === "discover" ? styles.selectedLink : ""
         }`}
-        onClick={() => setSelectedLink("discover")}
+        onClick={() => handleLinkClick("discover")}
       >
         Discover
-      </a>
-      <a
+      </Link>
+      <Link
+        to="/shop"
         className={`${styles.shopLink} ${
           selectedLink === "shop" ? styles.selectedLink : ""
         }`}
-        onClick={() => setSelectedLink("shop")}
+        onClick={() => handleLinkClick("shop")}
       >
         Shop
-      </a>
+      </Link>
     </section>
   );
 }
+
+// Prop Types
+FilterableSection.propTypes = {
+  selectedLink: PropTypes.string,
+  handleLinkClick: PropTypes.func,
+};
 
 export default Header;
