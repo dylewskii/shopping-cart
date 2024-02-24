@@ -1,15 +1,18 @@
+// react
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
+// styles
 import styles from "./CarouselBanner.module.css";
 
 function CarouselBanner({ children }) {
   return <section className={styles.carouselBanner}>{children}</section>;
 }
 
-CarouselBanner.Header = ({ children }) => {
+CarouselBanner.Header = ({ children, linkRedirect }) => {
   return (
     <div className={styles.carouselBannerHeader}>
       <h3>{children}</h3>
-      <a>See All</a>
+      <Link to={`/${linkRedirect}`}>See All</Link>
     </div>
   );
 };
@@ -20,7 +23,10 @@ CarouselBanner.Items = ({ children }) => {
 
 // Prop Types
 CarouselBanner.propTypes = { children: PropTypes.node };
-CarouselBanner.Header.propTypes = { children: PropTypes.node };
+CarouselBanner.Header.propTypes = {
+  children: PropTypes.node,
+  linkRedirect: PropTypes.string,
+};
 CarouselBanner.Items.propTypes = { children: PropTypes.node };
 
 // Display Names

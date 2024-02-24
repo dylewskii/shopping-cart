@@ -13,7 +13,9 @@ export default function HomePage() {
       <Hero />
       {/* ------ Shop Banner ------ */}
       <CarouselBanner>
-        <CarouselBanner.Header>Shop Now</CarouselBanner.Header>
+        <CarouselBanner.Header linkRedirect="shop">
+          Shop Now
+        </CarouselBanner.Header>
         <CarouselBanner.Items>
           {shopImgData.map((shopItem) => (
             <ProductCard key={shopItem.id}>
@@ -33,7 +35,9 @@ export default function HomePage() {
       <HeroTwo />
       {/* ------ Discover Banner ------ */}
       <CarouselBanner>
-        <CarouselBanner.Header>Discover</CarouselBanner.Header>
+        <CarouselBanner.Header linkRedirect="discover">
+          Discover
+        </CarouselBanner.Header>
         <CarouselBanner.Items>
           {discoverImgData.map((discoverItem) => (
             <ProductCard key={discoverItem.id}>
