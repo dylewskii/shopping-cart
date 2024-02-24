@@ -40,8 +40,85 @@
   },
   {
     "id": 4,
+    "alt": "Nike Dunk Low Shoes",
+    "brand": "Nike",
+    "description": "Dunk Low",
+    "color": "Orange/Black",
+    "price": "120.00",
+    "src": {
+      "left": "src/assets/images/shoes/dunk-low-orangeblack-1.webp",
+      "right": "src/assets/images/shoes/dunk-low-orangeblack-2.webp",
+      "front": "src/assets/images/shoes/dunk-low-orangeblack-3.webp"
+    }
+  },
+  {
+    "id": 5,
+    "alt": "Nike Blazer Low 77 Jumbo Shoes",
+    "brand": "Nike",
+    "description": "Blazer Low 77 Jumbo",
+    "color": "White",
+    "price": "120.00",
+    "src": {
+      "left": "src/assets/images/shoes/blazer-low-77-jumbo-1.webp",
+      "right": "src/assets/images/shoes/blazer-low-77-jumbo-2.webp",
+      "front": "src/assets/images/shoes/blazer-low-77-jumbo-3.webp"
+    }
+  },
+  {
+    "id": 6,
+    "alt": "Nike Air Max 1 Grey Shoes",
+    "brand": "Nike",
+    "description": "Air Max 1",
+    "color": "Grey",
+    "price": "120.00",
+    "src": {
+      "left": "src/assets/images/shoes/air-max-1-grey-1.webp",
+      "right": "src/assets/images/shoes/air-max-1-grey-2.webp",
+      "front": "src/assets/images/shoes/air-max-1-grey-3.webp"
+    }
+  },
+  {
+    "id": 7,
+    "alt": "Nike Air Max 1 White and Black Shoes",
+    "brand": "Nike",
+    "description": "Air Max 1",
+    "color": "White/Black",
+    "price": "120.00",
+    "src": {
+      "left": "src/assets/images/shoes/air-max-1-whiteblack-1.webp",
+      "right": "src/assets/images/shoes/air-max-1-whiteblack-2.webp",
+      "front": "src/assets/images/shoes/air-max-1-whiteblack-3.webp"
+    }
+  },
+  {
+    "id": 8,
+    "alt": "Nike Vomero 5 Black Shoes",
+    "brand": "Nike",
+    "description": "Vomero 5",
+    "color": "Black",
+    "price": "120.00",
+    "src": {
+      "left": "src/assets/images/shoes/zoom-vomero-5-black-1.webp",
+      "right": "src/assets/images/shoes/zoom-vomero-5-black-1.webp",
+      "front": "src/assets/images/shoes/zoom-vomero-5-black-1.webp"
+    }
+  },
+  {
+    "id": 9,
+    "alt": "Nike Vomero 5 White Shoes",
+    "brand": "Nike",
+    "description": "Vomero 5",
+    "color": "White",
+    "price": "120.00",
+    "src": {
+      "left": "src/assets/images/shoes/zoom-vomero-5-white-1.webp",
+      "right": "src/assets/images/shoes/zoom-vomero-5-white-1.webp",
+      "front": "src/assets/images/shoes/zoom-vomero-5-white-1.webp"
+    }
+  },
+  {
+    "id": 10,
     "alt": "Nike V2K White Shoe",
-    "name": "Nike V2K",
     "brand": "Nike",
     "description": "V2K",
     "color": "White",
