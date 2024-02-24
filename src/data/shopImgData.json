@@ -6,6 +6,7 @@
     "description": "Air Force 1",
     "color": "Black",
     "price": "100.00",
+    "inStock": true,
     "src": {
       "left": "src/assets/images/shoes/air-force-1-black-1.webp",
       "right": "src/assets/images/shoes/air-force-1-black-2.webp",
@@ -19,6 +20,7 @@
     "description": "Air Force 1",
     "color": "White",
     "price": "100.00",
+    "inStock": true,
     "src": {
       "left": "src/assets/images/shoes/air-force-1-white-1.webp",
       "right": "src/assets/images/shoes/air-force-1-white-2.webp",
@@ -32,6 +34,7 @@
     "description": "Dunk Low",
     "color": "Green",
     "price": "90.00",
+    "inStock": true,
     "src": {
       "left": "src/assets/images/shoes/dunk-low-green-1.webp",
       "right": "src/assets/images/shoes/dunk-low-green-2.webp",
@@ -45,6 +48,7 @@
     "description": "Dunk Low",
     "color": "Orange/Black",
     "price": "120.00",
+    "inStock": true,
     "src": {
       "left": "src/assets/images/shoes/dunk-low-orangeblack-1.webp",
       "right": "src/assets/images/shoes/dunk-low-orangeblack-2.webp",
@@ -58,6 +62,7 @@
     "description": "Blazer Low 77 Jumbo",
     "color": "White",
     "price": "120.00",
+    "inStock": true,
     "src": {
       "left": "src/assets/images/shoes/blazer-low-77-jumbo-1.webp",
       "right": "src/assets/images/shoes/blazer-low-77-jumbo-2.webp",
@@ -71,6 +76,7 @@
     "description": "Air Max 1",
     "color": "Grey",
     "price": "120.00",
+    "inStock": true,
     "src": {
       "left": "src/assets/images/shoes/air-max-1-grey-1.webp",
       "right": "src/assets/images/shoes/air-max-1-grey-2.webp",
@@ -84,6 +90,7 @@
     "description": "Air Max 1",
     "color": "White/Black",
     "price": "120.00",
+    "inStock": true,
     "src": {
       "left": "src/assets/images/shoes/air-max-1-whiteblack-1.webp",
       "right": "src/assets/images/shoes/air-max-1-whiteblack-2.webp",
@@ -97,6 +104,7 @@
     "description": "Vomero 5",
     "color": "Black",
     "price": "120.00",
+    "inStock": true,
     "src": {
       "left": "src/assets/images/shoes/zoom-vomero-5-black-1.webp",
       "right": "src/assets/images/shoes/zoom-vomero-5-black-1.webp",
@@ -110,6 +118,7 @@
     "description": "Vomero 5",
     "color": "White",
     "price": "120.00",
+    "inStock": true,
     "src": {
       "left": "src/assets/images/shoes/zoom-vomero-5-white-1.webp",
       "right": "src/assets/images/shoes/zoom-vomero-5-white-1.webp",
@@ -123,6 +132,7 @@
     "description": "V2K",
     "color": "White",
     "price": "120.00",
+    "inStock": true,
     "src": {
       "left": "src/assets/images/shoes/v2k-white-1.webp",
       "right": "src/assets/images/shoes/v2k-white-2.webp",
