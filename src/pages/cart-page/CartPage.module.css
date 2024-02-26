@@ -1,3 +1,16 @@
+/* --- FONTS --- */
+.cartHeading,
+.cartTotalPrice {
+  font-family: "heading-bold";
+}
+
+.totalBox > p {
+  font-family: "heading-bold";
+  text-transform: uppercase;
+}
+
+/* --- STYLES --- */
+
 .cartPageWrapper {
   margin: 1rem;
 }
@@ -8,7 +21,7 @@
 }
 
 .cartHeader {
-  padding: 2rem 1rem 0 1rem;
+  padding: 1rem 0 0 0;
   border-top: 2px solid var(--clr-black);
 }
 
@@ -16,13 +29,28 @@
   text-transform: uppercase;
 }
 
-.cartHeading,
-.cartTotalPrice {
-  font-family: "heading-bold";
-}
-
 .cartTotalPrice {
   grid-column: 3;
   display: flex;
   justify-content: flex-end;
+}
+
+.orderSummaryHeading {
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.orderSummary > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.orderSummary p {
+  padding: 5px 0;
+}
+
+.totalBox > p {
+  text-transform: uppercase;
+  margin-top: 1rem;
 }

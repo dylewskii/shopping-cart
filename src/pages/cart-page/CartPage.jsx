@@ -11,7 +11,7 @@ export default function CartPage() {
         <h2 className={styles.cartHeading}>Your Cart is Empty</h2>
       ) : (
         <div className={styles.cartWrapper}>
-          <div className={styles.cartBox}>
+          <div className={styles.cartSummary}>
             <header className={styles.cartHeader}>
               <h3 className={styles.cartHeading}>Your Cart</h3>
               <p className={styles.cartTotalPrice}>{formatCurrency(1000)}</p>
@@ -34,7 +34,19 @@ export default function CartPage() {
             </div>
           </div>
           <div className={styles.orderSummary}>
-            <h4>Order Summary</h4>
+            <h4 className={styles.orderSummaryHeading}>Order Summary</h4>
+            <div className={styles.subtotalBox}>
+              <p>Subtotal &#40;incl VAT&#41;</p>
+              <p>{formatCurrency(15)}</p>
+            </div>
+            <div className={styles.shippingBox}>
+              <p>Shipping & Handling</p>
+              <p>{formatCurrency(1000)}</p>
+            </div>
+            <div className={styles.totalBox}>
+              <p>Total</p>
+              <p>{formatCurrency(1000)}</p>
+            </div>
           </div>
         </div>
       )}
