@@ -76,7 +76,8 @@ label,
 input,
 span,
 img,
-::placeholder {
+::placeholder,
+button {
   font-family: "regular";
 }
 
