@@ -1,0 +1,28 @@
+.cartPageWrapper {
+  margin: 1rem;
+}
+
+.currentCartItems {
+  display: flex;
+  flex-direction: column;
+}
+
+.cartHeader {
+  padding: 2rem 1rem 0 1rem;
+  border-top: 2px solid var(--clr-black);
+}
+
+.cartHeading {
+  text-transform: uppercase;
+}
+
+.cartHeading,
+.cartTotalPrice {
+  font-family: "heading-bold";
+}
+
+.cartTotalPrice {
+  grid-column: 3;
+  display: flex;
+  justify-content: flex-end;
+}

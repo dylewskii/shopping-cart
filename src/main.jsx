@@ -10,6 +10,7 @@ import ShopPage from "./pages/shop-page/ShopPage.jsx";
 import DiscoverPage from "./pages/discover-page/DiscoverPage.jsx";
 import HomePage from "./pages/home-page/HomePage.jsx";
 import NotFound from "./pages/not-found/NotFound.jsx";
+import CartPage from "./pages/cart-page/CartPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,14 @@ const router = createBrowserRouter([
     element: (
       <Layout>
         <DiscoverPage />
+      </Layout>
+    ),
+  },
+  {
+    path: "/cart",
+    element: (
+      <Layout>
+        <CartPage />
       </Layout>
     ),
   },
