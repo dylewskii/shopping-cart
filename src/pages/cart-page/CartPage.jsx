@@ -48,6 +48,9 @@ export default function CartPage() {
               <p>{formatCurrency(1000)}</p>
             </div>
           </div>
+          <div className={styles.checkoutBox}>
+            <button className={styles.checkoutBtn}>Checkout</button>
+          </div>
         </div>
       )}
     </section>

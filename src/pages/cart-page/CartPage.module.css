@@ -22,11 +22,12 @@
 
 .cartHeader {
   padding: 1rem 0 0 0;
-  border-top: 2px solid var(--clr-black);
+  border-top: 1.5px solid var(--clr-black);
 }
 
 .cartHeading {
   text-transform: uppercase;
+  font-size: 1.25rem;
 }
 
 .cartTotalPrice {
@@ -37,7 +38,9 @@
 
 .orderSummaryHeading {
   text-transform: uppercase;
+  padding: 1rem 0 0 0;
   margin-bottom: 1rem;
+  font-size: 1.25rem;
 }
 
 .orderSummary > div {
@@ -53,4 +56,34 @@
 .totalBox > p {
   text-transform: uppercase;
   margin-top: 1rem;
+}
+
+.checkoutBtn {
+  text-transform: uppercase;
+  background-color: var(--clr-black);
+  color: var(--clr-white);
+  width: 100%;
+  border-radius: 3px;
+  margin-top: 1rem;
+}
+
+.checkoutBtn:hover {
+  opacity: 0.8;
+  transition: 0s;
+}
+
+@media (min-width: 800px) {
+  .cartWrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+  }
+
+  .orderSummary {
+    border-top: 1.5px solid var(--clr-black);
+  }
+
+  .checkoutBox {
+    grid-column: span 2;
+  }
 }
