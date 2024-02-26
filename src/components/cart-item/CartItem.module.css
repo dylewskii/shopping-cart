@@ -1,7 +1,7 @@
 .cartItemBox {
   display: grid;
   grid-template-columns: minmax(100px, 1fr) 1.2fr 50px;
-  padding: 0 1rem 2rem 1rem;
+  padding: 1rem 0;
 }
 
 .imageWrapper {
