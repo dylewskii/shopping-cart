@@ -6,6 +6,7 @@ import HeroTwo from "../../components/hero-two/HeroTwo";
 // image data
 import shopImgData from "../../data/shopImgData.json";
 import discoverImgData from "../../data/discoverImgData.json";
+import formatCurrency from "../../utils/formatCurrency";
 
 export default function HomePage() {
   return (
@@ -27,7 +28,9 @@ export default function HomePage() {
               <ProductCard.Description>
                 {shopItem.description} - {shopItem.color}
               </ProductCard.Description>
-              <ProductCard.Price>£{shopItem.price}</ProductCard.Price>
+              <ProductCard.Price>
+                {formatCurrency(shopItem.price)}
+              </ProductCard.Price>
             </ProductCard>
           ))}
         </CarouselBanner.Items>
