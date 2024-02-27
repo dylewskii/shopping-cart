@@ -1,0 +1,10 @@
+.discoverPage {
+  padding: 0;
+  min-height: 500px;
+}
+
+@media (min-width: 500px) {
+  .discoverPage {
+    padding: 1rem 2rem;
+  }
+}
