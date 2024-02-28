@@ -1,5 +1,5 @@
 // react
-import PropTypes from "prop-types";
+import { useParams } from "react-router-dom";
 import ProductExpanded from "../../components/product-expanded/ProductExpanded";
 // css
 import styles from "./ProductPage.module.css";
@@ -8,22 +8,27 @@ import shopData from "../../data/shopImgData.json";
 // utils
 import formatCurrency from "../../utils/formatCurrency";
 
-export default function ProductPage({ selectedProductId }) {
-  const targetProduct = shopData.find((item) => item.id === selectedProductId);
+export default function ProductPage() {
+  const { productId } = useParams();
+  const targetProduct = shopData.find(
+    (item) => item.id === parseInt(productId)
+  );
 
   return (
     <section className={styles.productPage}>
       <ProductExpanded>
-        <ProductExpanded.ProductImage />
+        <ProductExpanded.ProductImage
+          src={`/${targetProduct.src.front}`}
+          alt={targetProduct.alt}
+        />
         <div className={styles.detailsBox}>
-          <ProductExpanded.Title>Nike</ProductExpanded.Title>
+          <ProductExpanded.Title>{targetProduct.brand}</ProductExpanded.Title>
           <ProductExpanded.Description>
-            Air Force 1 - Black
+            {targetProduct.description} - {targetProduct.color}
           </ProductExpanded.Description>
-          <ProductExpanded.Price>£100.00</ProductExpanded.Price>
-          {/* {targetProduct.brand}
-          {`${targetProduct.description} - ${targetProduct.color}`}
-          {formatCurrency(targetProduct.price)} */}
+          <ProductExpanded.Price>
+            {formatCurrency(targetProduct.price)}
+          </ProductExpanded.Price>
         </div>
         <ProductExpanded.Sizing />
         <ProductExpanded.AddToCart />
@@ -31,6 +36,3 @@ export default function ProductPage({ selectedProductId }) {
     </section>
   );
 }
-
-// Prop Types
-ProductPage.propTypes = { selectedProductId: PropTypes.string };
