@@ -12,6 +12,7 @@ import DiscoverPage from "./pages/discover-page/DiscoverPage.jsx";
 import HomePage from "./pages/home-page/HomePage.jsx";
 import NotFound from "./pages/not-found/NotFound.jsx";
 import CartPage from "./pages/cart-page/CartPage.jsx";
+import ProductPage from "./pages/product-page/ProductPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -48,6 +49,14 @@ const router = createBrowserRouter([
     element: (
       <Layout>
         <CartPage />
+      </Layout>
+    ),
+  },
+  {
+    path: "/product/:id",
+    element: (
+      <Layout>
+        <ProductPage />
       </Layout>
     ),
   },
