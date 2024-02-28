@@ -4,8 +4,8 @@ import CarouselBanner from "../../components/carousel-banner/CarouselBanner";
 import ProductCard from "../../components/product-card/ProductCard";
 import HeroTwo from "../../components/hero-two/HeroTwo";
 // image data
-import shopImgData from "../../data/shopImgData.json";
-import discoverImgData from "../../data/discoverImgData.json";
+import shopData from "../../data/shopData.json";
+import discoverData from "../../data/discoverData.json";
 import formatCurrency from "../../utils/formatCurrency";
 
 export default function HomePage() {
@@ -18,7 +18,7 @@ export default function HomePage() {
           Shop Now
         </CarouselBanner.Header>
         <CarouselBanner.Items>
-          {shopImgData.map((shopItem) => (
+          {shopData.map((shopItem) => (
             <ProductCard key={shopItem.id}>
               <ProductCard.ProductImage
                 src={shopItem.src.left}
@@ -42,7 +42,7 @@ export default function HomePage() {
           Discover
         </CarouselBanner.Header>
         <CarouselBanner.Items>
-          {discoverImgData.map((discoverItem) => (
+          {discoverData.map((discoverItem) => (
             <ProductCard key={discoverItem.id}>
               <ProductCard.ProductImage
                 src={discoverItem.src}

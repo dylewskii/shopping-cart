@@ -1,7 +1,7 @@
 // components
 import BlogEntry from "../../components/blog-entry/BlogEntry";
 // data
-import blogImgData from "../../data/blogImgData.json";
+import blogData from "../../data/blogData.json";
 // css
 import styles from "./DiscoverPage.module.css";
 
@@ -9,7 +9,7 @@ export default function DiscoverPage() {
   return (
     <>
       <section className={styles.discoverPage}>
-        {blogImgData.map((blogItem) => (
+        {blogData.map((blogItem) => (
           <BlogEntry key={blogItem.id}>
             <BlogEntry.BlogImage src={blogItem.src} alt={blogItem.alt} />
             <BlogEntry.Content>

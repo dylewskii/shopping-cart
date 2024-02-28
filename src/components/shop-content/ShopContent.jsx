@@ -1,13 +1,13 @@
 import PropTypes from "prop-types";
 import styles from "./ShopContent.module.css";
-import shopImgData from "../../data/shopImgData.json";
+import shopData from "../../data/shopData.json";
 
 export default function ShopContent({ children }) {
   return <section className={styles.shopSection}>{children}</section>;
 }
 
 ShopContent.Title = ({ children }) => {
-  const totalProductCount = shopImgData.filter(
+  const totalProductCount = shopData.filter(
     (shopItem) => shopItem.inStock === true
   ).length;
 

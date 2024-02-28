@@ -5,7 +5,7 @@ import ProductExpanded from "../../components/product-expanded/ProductExpanded";
 // css
 import styles from "./ProductPage.module.css";
 // data
-import shopData from "../../data/shopImgData.json";
+import shopData from "../../data/shopData.json";
 // utils
 import formatCurrency from "../../utils/formatCurrency";
 

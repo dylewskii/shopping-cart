@@ -1,5 +1,5 @@
 import ShopContent from "../../components/shop-content/ShopContent";
-import shopImgData from "../../data/shopImgData.json";
+import shopData from "../../data/shopData.json";
 import ProductCard from "../../components/product-card/ProductCard";
 import formatCurrency from "../../utils/formatCurrency";
 
@@ -10,7 +10,7 @@ export default function ShopPage() {
         <ShopContent.Title>New Arrivals</ShopContent.Title>
         <ShopContent.SideBar />
         <ShopContent.Products>
-          {shopImgData.map((shopItem) => (
+          {shopData.map((shopItem) => (
             <ProductCard key={shopItem.id}>
               <ProductCard.ProductImage
                 src={shopItem.src.left}
