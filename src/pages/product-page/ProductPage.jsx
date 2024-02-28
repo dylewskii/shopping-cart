@@ -1,5 +1,6 @@
 // react
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import { useEffect } from "react";
 import ProductExpanded from "../../components/product-expanded/ProductExpanded";
 // css
 import styles from "./ProductPage.module.css";
@@ -10,9 +11,22 @@ import formatCurrency from "../../utils/formatCurrency";
 
 export default function ProductPage() {
   const { productId } = useParams();
+  const navigate = useNavigate();
+
   const targetProduct = shopData.find(
     (item) => item.id === parseInt(productId)
   );
+
+  // navigate to NotFound if incorrect productId
+  useEffect(() => {
+    if (!targetProduct) {
+      navigate("/*");
+    }
+  }, [navigate, productId, targetProduct]);
+
+  if (!targetProduct) {
+    return null;
+  }
 
   return (
     <section className={styles.productPage}>
