@@ -15,11 +15,16 @@ export default function ProductPage({ selectedProductId }) {
     <section className={styles.productPage}>
       <ProductExpanded>
         <ProductExpanded.ProductImage />
-        <ProductExpanded.Details>
+        <div className={styles.detailsBox}>
+          <ProductExpanded.Title>Nike</ProductExpanded.Title>
+          <ProductExpanded.Description>
+            Air Force 1 - Black
+          </ProductExpanded.Description>
+          <ProductExpanded.Price>£100.00</ProductExpanded.Price>
           {/* {targetProduct.brand}
           {`${targetProduct.description} - ${targetProduct.color}`}
           {formatCurrency(targetProduct.price)} */}
-        </ProductExpanded.Details>
+        </div>
         <ProductExpanded.Sizing />
         <ProductExpanded.AddToCart />
       </ProductExpanded>
