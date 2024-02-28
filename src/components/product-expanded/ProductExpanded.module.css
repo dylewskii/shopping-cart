@@ -1,0 +1,79 @@
+/* --- FONTS --- */
+.title,
+.sizeCell {
+  font-family: "heading-bold";
+}
+
+/* --- BASE --- */
+.productImageWrapper {
+  width: 100%;
+  min-height: 60dvh;
+  background-color: var(--clr-primary);
+  object-fit: cover;
+}
+
+.title {
+  font-size: 2rem;
+  letter-spacing: 4px;
+}
+
+.description,
+.price {
+  font-size: 1.6rem;
+}
+
+.price {
+  margin-top: 1.5rem;
+}
+
+.sizingBoxHeader,
+.sizingBox,
+.addToCartBox {
+  margin: 1rem;
+}
+
+.sizingBoxHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sizeGuide {
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+.sizingBox {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.sizeCell {
+  border: 1.5px solid var(--clr-grey);
+  border-radius: 4px;
+  padding: 1em;
+  text-align: center;
+  cursor: pointer;
+  transition: border 100ms ease-in-out;
+}
+
+.selected {
+  background-color: var(--clr-black);
+  color: var(--clr-primary);
+}
+
+.sizeCell:hover {
+  border: 1.5px solid var(--clr-black);
+}
+
+.addToCartBtn {
+  width: 100%;
+  background-color: var(--clr-black);
+  color: var(--text-secondary);
+  padding: 1em 0;
+  border-radius: 4px;
+}
+
+.addToCartBtn:hover {
+  opacity: 0.8;
+}
