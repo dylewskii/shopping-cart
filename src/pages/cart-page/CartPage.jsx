@@ -1,13 +1,14 @@
-import { useState } from "react";
+import { useContext } from "react";
 import styles from "./CartPage.module.css";
 import CartItem from "../../components/cart-item/CartItem";
 import formatCurrency from "../../utils/formatCurrency";
+import CartContext from "../../context/CartContext";
 
 export default function CartPage() {
-  const [cartItem, setCartItems] = useState(["shoes"]);
+  const { cartItems } = useContext(CartContext);
   return (
     <section className={styles.cartPageWrapper}>
-      {cartItem.length === 0 ? (
+      {cartItems.length === 0 ? (
         <h2 className={styles.cartHeading}>Your Cart is Empty</h2>
       ) : (
         <div className={styles.cartWrapper}>
