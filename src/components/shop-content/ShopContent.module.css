@@ -35,13 +35,6 @@
   gap: 1rem;
 }
 
-.products > div {
-  display: grid;
-  place-content: center;
-  padding: 4rem 1rem;
-  background-color: var(--clr-white);
-}
-
 @media (min-width: 500px) {
   .header {
     flex-direction: row;
