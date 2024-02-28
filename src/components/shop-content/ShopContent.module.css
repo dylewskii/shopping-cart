@@ -51,7 +51,7 @@
   }
 }
 
-@media (min-width: 800px) {
+@media (min-width: 920px) {
   .sideBar {
     grid-column: 1;
     grid-row: 2;
