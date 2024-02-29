@@ -3,7 +3,6 @@
 import PropTypes from "prop-types";
 // css
 import styles from "./ProductExpanded.module.css";
-import { useState } from "react";
 
 export default function ProductExpanded({ children }) {
   return <div>{children}</div>;
@@ -29,14 +28,8 @@ ProductExpanded.Price = ({ children }) => {
   return <p className={styles.price}>{children}</p>;
 };
 
-ProductExpanded.Sizing = () => {
-  const sizes = [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
-  const [selectedSize, setSelectedSize] = useState(null);
-
-  const handleSizeSelection = (size) => {
-    console.log(selectedSize);
-    setSelectedSize(size);
-  };
+ProductExpanded.Sizing = ({ handleSizeSelection, selectedSize }) => {
+  const shoeSizes = [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
 
   return (
     <>
@@ -45,7 +38,7 @@ ProductExpanded.Sizing = () => {
         <p className={styles.sizeGuide}>Size Guide</p>
       </div>
       <div className={styles.sizingBox}>
-        {sizes.map((size) => (
+        {shoeSizes.map((size) => (
           <div
             key={size}
             className={
@@ -63,10 +56,12 @@ ProductExpanded.Sizing = () => {
   );
 };
 
-ProductExpanded.AddToCart = () => {
+ProductExpanded.AddToCart = ({ handleAddToCart }) => {
   return (
     <div className={styles.addToCartBox}>
-      <button className={styles.addToCartBtn}>Add To Cart</button>
+      <button onClick={handleAddToCart} className={styles.addToCartBtn}>
+        Add To Cart
+      </button>
     </div>
   );
 };
@@ -81,8 +76,11 @@ ProductExpanded.ProductImage.propTypes = {
 ProductExpanded.Title.propTypes = { children: PropTypes.node };
 ProductExpanded.Description.propTypes = { children: PropTypes.node };
 ProductExpanded.Price.propTypes = { children: PropTypes.node };
-ProductExpanded.Sizing.propTypes = { children: PropTypes.node };
-ProductExpanded.AddToCart.propTypes = { children: PropTypes.node };
+ProductExpanded.Sizing.propTypes = {
+  handleSizeSelection: PropTypes.func,
+  selectedSize: PropTypes.number,
+};
+ProductExpanded.AddToCart.propTypes = { handleAddToCart: PropTypes.func };
 
 // Display Names
 ProductExpanded.displayName = "ProductExpanded";
