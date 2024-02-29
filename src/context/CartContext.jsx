@@ -5,14 +5,29 @@ const CartContext = createContext("");
 
 export const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
+  const [selectedSize, setSelectedSize] = useState(null);
 
-  const addToCart = () => {};
+  const handleSizeSelection = (size) => {
+    setSelectedSize(size);
+  };
 
-  const removeFromCart = () => {};
+  const handleAddToCart = (productObject) => {
+    productObject.size = selectedSize;
+    setCartItems([...cartItems, productObject]);
+    console.log(cartItems);
+  };
+  const handleRemoveFromCart = () => {};
 
   return (
     <CartContext.Provider
-      value={{ cartItems, setCartItems, addToCart, removeFromCart }}
+      value={{
+        cartItems,
+        setCartItems,
+        handleAddToCart,
+        handleRemoveFromCart,
+        handleSizeSelection,
+        selectedSize,
+      }}
     >
       {children}
     </CartContext.Provider>
