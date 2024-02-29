@@ -14,9 +14,11 @@ export const CartProvider = ({ children }) => {
   const handleAddToCart = (productObject) => {
     productObject.size = selectedSize;
     setCartItems([...cartItems, productObject]);
-    console.log(cartItems);
   };
-  const handleRemoveFromCart = () => {};
+  const handleRemoveFromCart = (productId) => {
+    const updatedCartItems = cartItems.filter((item) => item.id !== productId);
+    setCartItems([...cartItems, updatedCartItems]);
+  };
 
   return (
     <CartContext.Provider
