@@ -5,7 +5,7 @@ import formatCurrency from "../../utils/formatCurrency";
 import CartContext from "../../context/CartContext";
 
 export default function CartPage() {
-  const { cartItems } = useContext(CartContext);
+  const { cartItems, handleRemoveFromCart } = useContext(CartContext);
 
   const calculateCostOfCart = () => {
     const allPrices = cartItems.map((item) => parseInt(item.price));
@@ -44,7 +44,13 @@ export default function CartPage() {
                     </CartItem.Description>
                     <CartItem.Color>Color: {cartItem.color}</CartItem.Color>
                     <CartItem.Size>Size: {cartItem.size}</CartItem.Size>
-                    <CartItem.RemoveBtn>Remove</CartItem.RemoveBtn>
+                    <CartItem.RemoveBtn
+                      handleRemoveFromCart={() =>
+                        handleRemoveFromCart(cartItem.id)
+                      }
+                    >
+                      Remove
+                    </CartItem.RemoveBtn>
                   </CartItem.Info>
                   <CartItem.Price>
                     {formatCurrency(cartItem.price)}

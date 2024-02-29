@@ -37,8 +37,12 @@ CartItem.Price = ({ children }) => {
   return <p className={styles.price}>{children}</p>;
 };
 
-CartItem.RemoveBtn = ({ children }) => {
-  return <button className={styles.removeBtn}>{children}</button>;
+CartItem.RemoveBtn = ({ children, handleRemoveFromCart }) => {
+  return (
+    <button onClick={handleRemoveFromCart} className={styles.removeBtn}>
+      {children}
+    </button>
+  );
 };
 
 // Prop Types
@@ -53,7 +57,10 @@ CartItem.Description.propTypes = { children: PropTypes.node };
 CartItem.Color.propTypes = { children: PropTypes.node };
 CartItem.Size.propTypes = { children: PropTypes.node };
 CartItem.Price.propTypes = { children: PropTypes.node };
-CartItem.RemoveBtn.propTypes = { children: PropTypes.node };
+CartItem.RemoveBtn.propTypes = {
+  children: PropTypes.node,
+  handleRemoveFromCart: PropTypes.func,
+};
 
 // Display Names
 CartItem.ProductImage.displayName = "CartItem.ProductImage.displayName";
