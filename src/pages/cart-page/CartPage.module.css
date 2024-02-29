@@ -32,6 +32,17 @@
   font-size: 1.25rem;
 }
 
+.emptyCartHeader {
+  display: grid;
+  place-items: center;
+  margin: 5rem 0;
+}
+
+.emptyCartHeading {
+  font-size: 2rem;
+  color: var(--text-tertiary);
+}
+
 .cartTotalPrice {
   grid-column: 3;
   display: flex;

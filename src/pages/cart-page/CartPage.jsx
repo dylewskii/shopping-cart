@@ -20,7 +20,9 @@ export default function CartPage() {
   return (
     <section className={styles.cartPageWrapper}>
       {cartItems.length === 0 ? (
-        <h2 className={styles.cartHeading}>Your Cart is Empty</h2>
+        <div className={styles.emptyCartHeader}>
+          <h3 className={styles.emptyCartHeading}>Your Cart is Empty</h3>
+        </div>
       ) : (
         <div className={styles.cartWrapper}>
           <div className={styles.cartSummary}>
