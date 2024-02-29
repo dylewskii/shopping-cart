@@ -29,6 +29,10 @@ CartItem.Color = ({ children }) => {
   return <p className={styles.color}>{children}</p>;
 };
 
+CartItem.Size = ({ children }) => {
+  return <p className={styles.size}>{children}</p>;
+};
+
 CartItem.Price = ({ children }) => {
   return <p className={styles.price}>{children}</p>;
 };
@@ -47,6 +51,7 @@ CartItem.Info.propTypes = { children: PropTypes.node };
 CartItem.Title.propTypes = { children: PropTypes.node };
 CartItem.Description.propTypes = { children: PropTypes.node };
 CartItem.Color.propTypes = { children: PropTypes.node };
+CartItem.Size.propTypes = { children: PropTypes.node };
 CartItem.Price.propTypes = { children: PropTypes.node };
 CartItem.Remove.propTypes = { children: PropTypes.node };
 
@@ -56,5 +61,6 @@ CartItem.Info.displayName = "CartItem.Info.displayName";
 CartItem.Title.displayName = "CartItem.Title.displayName";
 CartItem.Description.displayName = "CartItem.Description.displayName";
 CartItem.Color.displayName = "CartItem.Color.displayName";
+CartItem.Size.displayName = "CartItem.Size.displayName";
 CartItem.Price.displayName = "CartItem.Price.displayName";
 CartItem.Remove.displayName = "CartItem.Remove.displayName";
