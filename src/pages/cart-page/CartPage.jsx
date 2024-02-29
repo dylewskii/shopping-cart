@@ -6,6 +6,17 @@ import CartContext from "../../context/CartContext";
 
 export default function CartPage() {
   const { cartItems } = useContext(CartContext);
+
+  const calculateCostOfCart = () => {
+    const allPrices = cartItems.map((item) => parseInt(item.price));
+    const total = allPrices.reduce((acc, curr) => acc + curr, 0);
+    return total;
+  };
+
+  const SHIPPING_COST = 15;
+  const subTotal = calculateCostOfCart();
+  const cartTotal = subTotal + SHIPPING_COST;
+
   return (
     <section className={styles.cartPageWrapper}>
       {cartItems.length === 0 ? (
@@ -15,38 +26,46 @@ export default function CartPage() {
           <div className={styles.cartSummary}>
             <header className={styles.cartHeader}>
               <h3 className={styles.cartHeading}>Your Cart</h3>
-              <p className={styles.cartTotalPrice}>{formatCurrency(1000)}</p>
+              <p className={styles.cartTotalPrice}>
+                {formatCurrency(cartTotal)}
+              </p>
             </header>
             <div className={styles.cartItems}>
-              <CartItem>
-                <CartItem.ProductImage src={"./sdc"} alt={"Test Img"}>
-                  Testing Item 1
-                </CartItem.ProductImage>
-                <CartItem.Info>
-                  <CartItem.Title>Testing Item 1</CartItem.Title>
-                  <CartItem.Description>
-                    Testing Description 1
-                  </CartItem.Description>
-                  <CartItem.Color>Color: Black</CartItem.Color>
-                  <CartItem.Remove>Remove</CartItem.Remove>
-                </CartItem.Info>
-                <CartItem.Price>{formatCurrency(10)}</CartItem.Price>
-              </CartItem>
+              {cartItems.map((cartItem) => (
+                <CartItem key={cartItem.id}>
+                  <CartItem.ProductImage
+                    src={cartItem.src.front}
+                    alt={cartItem.alt}
+                  />
+                  <CartItem.Info>
+                    <CartItem.Title>{cartItem.brand}</CartItem.Title>
+                    <CartItem.Description>
+                      {cartItem.description}
+                    </CartItem.Description>
+                    <CartItem.Color>Color: {cartItem.color}</CartItem.Color>
+                    <CartItem.Size>Size: {cartItem.size}</CartItem.Size>
+                    <CartItem.Remove>Remove</CartItem.Remove>
+                  </CartItem.Info>
+                  <CartItem.Price>
+                    {formatCurrency(cartItem.price)}
+                  </CartItem.Price>
+                </CartItem>
+              ))}
             </div>
           </div>
           <div className={styles.orderSummary}>
             <h4 className={styles.orderSummaryHeading}>Order Summary</h4>
             <div className={styles.subtotalBox}>
               <p>Subtotal &#40;incl VAT&#41;</p>
-              <p>{formatCurrency(15)}</p>
+              <p>{formatCurrency(subTotal)}</p>
             </div>
             <div className={styles.shippingBox}>
               <p>Shipping & Handling</p>
-              <p>{formatCurrency(1000)}</p>
+              <p>{formatCurrency(SHIPPING_COST)}</p>
             </div>
             <div className={styles.totalBox}>
               <p>Total</p>
-              <p>{formatCurrency(1000)}</p>
+              <p>{formatCurrency(cartTotal)}</p>
             </div>
           </div>
           <div className={styles.checkoutBox}>
