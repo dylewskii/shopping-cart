@@ -24,11 +24,10 @@ function Header() {
           </Link>
         </h1>
       </div>
-      <div className={styles.basketBox}>
-        <Link to="/cart">
-          <RiShoppingBagLine
-            className={`${styles.basketIcon} ${styles.icon}`}
-          />
+      <div className={styles.cartBox}>
+        <Link to="/cart" className={styles.cartLink}>
+          <RiShoppingBagLine className={`${styles.cartIcon} ${styles.icon}`} />
+          <span className={styles.cartCount}>2</span>
         </Link>
       </div>
       <FilterableSection

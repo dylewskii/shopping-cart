@@ -24,14 +24,28 @@ header {
   align-items: center;
 }
 
-.basketBox {
+.cartBox {
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
 
+.cartLink {
+  display: flex;
+  position: relative;
+}
+
+.cartCount {
+  position: absolute;
+  bottom: -50%;
+  right: -50%;
+  background-color: orange;
+  border-radius: 25%;
+  padding: 3px 5px;
+}
+
 .icon {
-  font-size: clamp(1.4rem, 0.6rem + 2vw, 2rem);
+  font-size: clamp(1.6rem, 0.6rem + 2vw, 2rem);
   cursor: pointer;
 }
 
@@ -89,7 +103,7 @@ header {
 
 @media (min-width: 800px) {
   .searchBox,
-  .basketBox {
+  .cartBox {
     grid-column: 3;
     grid-row: 1;
     display: flex;
