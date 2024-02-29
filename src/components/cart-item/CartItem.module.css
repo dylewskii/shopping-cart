@@ -18,15 +18,16 @@
   grid-row: 1;
   display: flex;
   flex-direction: column;
-  position: relative;
+  font-size: 1rem;
+  margin: 0 0 0 1rem;
 }
 
 .title {
-  display: inline-block;
   text-transform: uppercase;
 }
 
-.description {
+.description,
+.size {
   margin-bottom: 1rem;
 }
 
@@ -37,11 +38,16 @@
 }
 
 .removeBtn {
-  display: inline-block;
+  width: fit-content;
   background: none;
   padding: 0;
   margin: 0;
-  margin-top: 1rem;
-  border-bottom: 1px solid var(--clr-black);
   border-radius: 0;
+  border-bottom: 1px solid var(--clr-black);
+}
+
+@media (min-width: 500px) {
+  .info {
+    font-size: 1.2rem;
+  }
 }

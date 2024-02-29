@@ -14,7 +14,7 @@ CartItem.ProductImage = ({ src, alt }) => {
 };
 
 CartItem.Info = ({ children }) => {
-  return <div className={styles.cartItemInfo}>{children}</div>;
+  return <div className={styles.info}>{children}</div>;
 };
 
 CartItem.Title = ({ children }) => {
@@ -37,7 +37,7 @@ CartItem.Price = ({ children }) => {
   return <p className={styles.price}>{children}</p>;
 };
 
-CartItem.Remove = ({ children }) => {
+CartItem.RemoveBtn = ({ children }) => {
   return <button className={styles.removeBtn}>{children}</button>;
 };
 
@@ -53,7 +53,7 @@ CartItem.Description.propTypes = { children: PropTypes.node };
 CartItem.Color.propTypes = { children: PropTypes.node };
 CartItem.Size.propTypes = { children: PropTypes.node };
 CartItem.Price.propTypes = { children: PropTypes.node };
-CartItem.Remove.propTypes = { children: PropTypes.node };
+CartItem.RemoveBtn.propTypes = { children: PropTypes.node };
 
 // Display Names
 CartItem.ProductImage.displayName = "CartItem.ProductImage.displayName";
@@ -63,4 +63,4 @@ CartItem.Description.displayName = "CartItem.Description.displayName";
 CartItem.Color.displayName = "CartItem.Color.displayName";
 CartItem.Size.displayName = "CartItem.Size.displayName";
 CartItem.Price.displayName = "CartItem.Price.displayName";
-CartItem.Remove.displayName = "CartItem.Remove.displayName";
+CartItem.RemoveBtn.displayName = "CartItem.RemoveBtn.displayName";
