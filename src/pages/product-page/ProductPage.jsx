@@ -1,6 +1,7 @@
 // react
 import { useNavigate, useParams } from "react-router-dom";
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
+import CartContext from "../../context/CartContext";
 import ProductExpanded from "../../components/product-expanded/ProductExpanded";
 // css
 import styles from "./ProductPage.module.css";
@@ -12,6 +13,8 @@ import formatCurrency from "../../utils/formatCurrency";
 export default function ProductPage() {
   const { productId } = useParams();
   const navigate = useNavigate();
+  const { handleAddToCart, handleSizeSelection, selectedSize } =
+    useContext(CartContext);
 
   const targetProduct = shopData.find(
     (item) => item.id === parseInt(productId)
@@ -44,8 +47,13 @@ export default function ProductPage() {
             {formatCurrency(targetProduct.price)}
           </ProductExpanded.Price>
         </div>
-        <ProductExpanded.Sizing />
-        <ProductExpanded.AddToCart />
+        <ProductExpanded.Sizing
+          handleSizeSelection={handleSizeSelection}
+          selectedSize={selectedSize}
+        />
+        <ProductExpanded.AddToCart
+          handleAddToCart={() => handleAddToCart(targetProduct)}
+        />
       </ProductExpanded>
     </section>
   );
