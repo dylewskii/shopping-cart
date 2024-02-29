@@ -44,7 +44,7 @@ export default function CartPage() {
                     </CartItem.Description>
                     <CartItem.Color>Color: {cartItem.color}</CartItem.Color>
                     <CartItem.Size>Size: {cartItem.size}</CartItem.Size>
-                    <CartItem.Remove>Remove</CartItem.Remove>
+                    <CartItem.RemoveBtn>Remove</CartItem.RemoveBtn>
                   </CartItem.Info>
                   <CartItem.Price>
                     {formatCurrency(cartItem.price)}
