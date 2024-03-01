@@ -1,15 +1,12 @@
-// react
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import CartContext from "../../context/CartContext";
-// css
 import styles from "./Header.module.css";
-// icons
 import { IoSearch } from "react-icons/io5";
 import { RiShoppingBagLine } from "react-icons/ri";
 
-function Header() {
+export default function Header() {
   const { cartItems } = useContext(CartContext);
   const [searchOpen, setSearchOpen] = useState(false);
   const [selectedLink, setSelectedLink] = useState("");
@@ -20,24 +17,30 @@ function Header() {
   };
 
   return (
-    <header>
+    <>
       {searchOpen ? (
-        <>
-          <div className={styles.iconBox}>
+        <header className={styles.searchHeader}>
+          <div className={styles.searchBox}>
             <IoSearch
               className={`${styles.searchIcon} ${styles.icon}`}
               onClick={handleSearchOpen}
             />
           </div>
-          <div className={styles.headingBox}>
-            <input type="text" className={styles.searchInput}></input>
+          <div className={styles.searchBox}>
+            <input
+              type="text"
+              className={styles.searchInput}
+              placeholder="Try searching for products or blogs."
+            ></input>
           </div>
-          <div className={styles.cartBox}>
-            <span onClick={handleSearchOpen}>X</span>
+          <div className={styles.closeBox}>
+            <span className={styles.closeIcon} onClick={handleSearchOpen}>
+              X
+            </span>
           </div>
-        </>
+        </header>
       ) : (
-        <>
+        <header className={styles.header}>
           <div className={styles.iconBox}>
             <IoSearch
               className={`${styles.searchIcon} ${styles.icon}`}
@@ -67,14 +70,13 @@ function Header() {
               </Link>
             )}
           </div>
-        </>
+          <FilterableSection
+            selectedLink={selectedLink}
+            handleLinkClick={handleLinkClick}
+          />
+        </header>
       )}
-
-      <FilterableSection
-        selectedLink={selectedLink}
-        handleLinkClick={handleLinkClick}
-      />
-    </header>
+    </>
   );
 }
 
@@ -103,10 +105,7 @@ function FilterableSection({ selectedLink, handleLinkClick }) {
   );
 }
 
-// Prop Types
 FilterableSection.propTypes = {
   selectedLink: PropTypes.string,
   handleLinkClick: PropTypes.func,
 };
-
-export default Header;
