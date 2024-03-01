@@ -23,7 +23,7 @@ function Header() {
     <header>
       {searchOpen ? (
         <>
-          <div className={styles.searchBox}>
+          <div className={styles.iconBox}>
             <IoSearch
               className={`${styles.searchIcon} ${styles.icon}`}
               onClick={handleSearchOpen}
@@ -38,7 +38,7 @@ function Header() {
         </>
       ) : (
         <>
-          <div className={styles.searchBox}>
+          <div className={styles.iconBox}>
             <IoSearch
               className={`${styles.searchIcon} ${styles.icon}`}
               onClick={handleSearchOpen}
