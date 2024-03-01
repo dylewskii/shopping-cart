@@ -11,12 +11,12 @@
 }
 
 .carouselBannerHeader h3,
-.carouselBanner a {
+.link {
   text-transform: uppercase;
   cursor: pointer;
 }
 
-.carouselBannerHeader a {
+.link {
   text-decoration: underline;
   text-underline-offset: 4px;
 }

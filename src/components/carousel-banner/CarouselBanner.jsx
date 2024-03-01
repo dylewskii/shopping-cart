@@ -11,8 +11,16 @@ function CarouselBanner({ children }) {
 CarouselBanner.Header = ({ children, linkRedirect }) => {
   return (
     <div className={styles.carouselBannerHeader}>
-      <h3>{children}</h3>
-      <Link to={`/${linkRedirect}`}>See All</Link>
+      <Link to={linkRedirect} onClick={() => window.scroll(0, 0)}>
+        <h3 onClick={() => window.scroll(0, 0)}>{children}</h3>
+      </Link>
+      <Link
+        to={`/${linkRedirect}`}
+        onClick={() => window.scroll(0, 0)}
+        className={styles.link}
+      >
+        See All
+      </Link>
     </div>
   );
 };
