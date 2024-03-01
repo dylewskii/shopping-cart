@@ -3,6 +3,7 @@
 import PropTypes from "prop-types";
 // css
 import styles from "./ProductExpanded.module.css";
+import { useState } from "react";
 
 export default function ProductExpanded({ children }) {
   return <div>{children}</div>;
@@ -57,10 +58,64 @@ ProductExpanded.Sizing = ({ handleSizeSelection, selectedSize }) => {
 };
 
 ProductExpanded.AddToCart = ({ handleAddToCart }) => {
+  const [loading, setLoading] = useState(false);
   return (
     <div className={styles.addToCartBox}>
-      <button onClick={handleAddToCart} className={styles.addToCartBtn}>
-        Add To Cart
+      <button
+        onClick={() => {
+          setLoading(true);
+          setTimeout(() => {
+            handleAddToCart();
+            setLoading(false);
+          }, 1000);
+        }}
+        className={styles.addToCartBtn}
+      >
+        {!loading ? (
+          "Add To Cart"
+        ) : (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="1em"
+            height="1em"
+            viewBox="0 0 24 24"
+            className={styles.loadingIcon}
+          >
+            <circle cx="18" cy="12" r="0" fill="currentColor">
+              <animate
+                attributeName="r"
+                begin=".67"
+                calcMode="spline"
+                dur="1.5s"
+                keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+                repeatCount="indefinite"
+                values="0;2;0;0"
+              />
+            </circle>
+            <circle cx="12" cy="12" r="0" fill="currentColor">
+              <animate
+                attributeName="r"
+                begin=".33"
+                calcMode="spline"
+                dur="1.5s"
+                keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+                repeatCount="indefinite"
+                values="0;2;0;0"
+              />
+            </circle>
+            <circle cx="6" cy="12" r="0" fill="currentColor">
+              <animate
+                attributeName="r"
+                begin="0"
+                calcMode="spline"
+                dur="1.5s"
+                keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8"
+                repeatCount="indefinite"
+                values="0;2;0;0"
+              />
+            </circle>
+          </svg>
+        )}
       </button>
     </div>
   );

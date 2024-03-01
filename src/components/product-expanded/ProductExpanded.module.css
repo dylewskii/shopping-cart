@@ -67,6 +67,9 @@
 }
 
 .addToCartBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   background-color: var(--clr-black);
   color: var(--text-secondary);
