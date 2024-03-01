@@ -1,7 +1,8 @@
 // react
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import CartContext from "../../context/CartContext";
 // css
 import styles from "./Header.module.css";
 // icons
@@ -11,6 +12,7 @@ import { RiShoppingBagLine } from "react-icons/ri";
 function Header() {
   const [selectedLink, setSelectedLink] = useState("");
   const handleLinkClick = (link) => setSelectedLink(link);
+  const { cartItems } = useContext(CartContext);
 
   return (
     <header>
@@ -25,10 +27,20 @@ function Header() {
         </h1>
       </div>
       <div className={styles.cartBox}>
-        <Link to="/cart" className={styles.cartLink}>
-          <RiShoppingBagLine className={`${styles.cartIcon} ${styles.icon}`} />
-          <span className={styles.cartCount}>2</span>
-        </Link>
+        {cartItems.length === 0 ? (
+          <Link to="/cart" className={styles.cartLink}>
+            <RiShoppingBagLine
+              className={`${styles.cartIcon} ${styles.icon}`}
+            />
+          </Link>
+        ) : (
+          <Link to="/cart" className={styles.cartLink}>
+            <RiShoppingBagLine
+              className={`${styles.cartIcon} ${styles.icon}`}
+            />
+            <span className={styles.cartCount}>{cartItems.length}</span>
+          </Link>
+        )}
       </div>
       <FilterableSection
         selectedLink={selectedLink}
