@@ -48,6 +48,11 @@
   align-items: center;
 }
 
+.closeIcon {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
 .cartBox,
 .closeBox {
   display: flex;
