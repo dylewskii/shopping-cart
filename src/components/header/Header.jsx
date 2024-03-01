@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import CartContext from "../../context/CartContext";
 import styles from "./Header.module.css";
-import { IoSearch } from "react-icons/io5";
+import { IoSearch, IoCloseSharp } from "react-icons/io5";
 import { RiShoppingBagLine } from "react-icons/ri";
 
 export default function Header() {
@@ -34,9 +34,10 @@ export default function Header() {
             ></input>
           </div>
           <div className={styles.closeBox}>
-            <span className={styles.closeIcon} onClick={handleSearchOpen}>
-              X
-            </span>
+            <IoCloseSharp
+              className={styles.closeIcon}
+              onClick={handleSearchOpen}
+            />
           </div>
         </header>
       ) : (
