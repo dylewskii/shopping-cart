@@ -1,11 +1,21 @@
-header {
+.header,
+.searchHeader {
   display: grid;
+}
+
+.header {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr 1fr;
   padding: 1rem 2rem;
 }
 
-.headingBox {
+.searchHeader {
+  grid-template-columns: 0.2fr 3fr 0.2fr;
+  padding: 1.5rem 2rem;
+}
+
+.headingBox,
+.searchBox {
   display: flex;
   align-items: center;
   margin: 0 auto;
@@ -18,13 +28,28 @@ header {
   text-underline-offset: 5px;
 }
 
+.searchBox {
+  width: 100%;
+}
+
+.searchInput {
+  width: 100%;
+  border: none;
+  font-size: 1.7rem;
+}
+
+.searchInput:focus {
+  outline: none;
+}
+
 .iconBox {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
 
-.cartBox {
+.cartBox,
+.closeBox {
   display: flex;
   justify-content: flex-end;
   align-items: center;
