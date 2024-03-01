@@ -10,38 +10,66 @@ import { IoSearch } from "react-icons/io5";
 import { RiShoppingBagLine } from "react-icons/ri";
 
 function Header() {
-  const [selectedLink, setSelectedLink] = useState("");
-  const handleLinkClick = (link) => setSelectedLink(link);
   const { cartItems } = useContext(CartContext);
+  const [searchOpen, setSearchOpen] = useState(false);
+  const [selectedLink, setSelectedLink] = useState("");
+
+  const handleLinkClick = (link) => setSelectedLink(link);
+  const handleSearchOpen = () => {
+    setSearchOpen(!searchOpen);
+  };
 
   return (
     <header>
-      <div className={styles.searchBox}>
-        <IoSearch className={`${styles.searchIcon} ${styles.icon}`} />
-      </div>
-      <div className={styles.headingBox}>
-        <h1>
-          <Link to="/" onClick={() => handleLinkClick("home")}>
-            LOREMIPSUM
-          </Link>
-        </h1>
-      </div>
-      <div className={styles.cartBox}>
-        {cartItems.length === 0 ? (
-          <Link to="/cart" className={styles.cartLink}>
-            <RiShoppingBagLine
-              className={`${styles.cartIcon} ${styles.icon}`}
+      {searchOpen ? (
+        <>
+          <div className={styles.searchBox}>
+            <IoSearch
+              className={`${styles.searchIcon} ${styles.icon}`}
+              onClick={handleSearchOpen}
             />
-          </Link>
-        ) : (
-          <Link to="/cart" className={styles.cartLink}>
-            <RiShoppingBagLine
-              className={`${styles.cartIcon} ${styles.icon}`}
+          </div>
+          <div className={styles.headingBox}>
+            <input type="text" className={styles.searchInput}></input>
+          </div>
+          <div className={styles.cartBox}>
+            <span onClick={handleSearchOpen}>X</span>
+          </div>
+        </>
+      ) : (
+        <>
+          <div className={styles.searchBox}>
+            <IoSearch
+              className={`${styles.searchIcon} ${styles.icon}`}
+              onClick={handleSearchOpen}
             />
-            <span className={styles.cartCount}>{cartItems.length}</span>
-          </Link>
-        )}
-      </div>
+          </div>
+          <div className={styles.headingBox}>
+            <h1>
+              <Link to="/" onClick={() => handleLinkClick("home")}>
+                LOREMIPSUM
+              </Link>
+            </h1>
+          </div>
+          <div className={styles.cartBox}>
+            {cartItems.length === 0 ? (
+              <Link to="/cart" className={styles.cartLink}>
+                <RiShoppingBagLine
+                  className={`${styles.cartIcon} ${styles.icon}`}
+                />
+              </Link>
+            ) : (
+              <Link to="/cart" className={styles.cartLink}>
+                <RiShoppingBagLine
+                  className={`${styles.cartIcon} ${styles.icon}`}
+                />
+                <span className={styles.cartCount}>{cartItems.length}</span>
+              </Link>
+            )}
+          </div>
+        </>
+      )}
+
       <FilterableSection
         selectedLink={selectedLink}
         handleLinkClick={handleLinkClick}
