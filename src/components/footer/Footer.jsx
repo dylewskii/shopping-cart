@@ -21,10 +21,14 @@ function Footer() {
               <Link to="/">About Us</Link>
             </li>
             <li>
-              <Link to="/shop">Shop</Link>
+              <Link to="/shop" onClick={() => window.scroll(0, 0)}>
+                Shop
+              </Link>
             </li>
             <li>
-              <Link to="/discover">Discover</Link>
+              <Link to="/discover" onClick={() => window.scroll(0, 0)}>
+                Discover
+              </Link>
             </li>
             <li>
               <Link to="/">Contact</Link>
