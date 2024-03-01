@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 // css
 import styles from "./Footer.module.css";
 // icons
-import iosBadge from "../../../public/badges/Download_on_the_App_Store_Badge.svg";
+import iosBadge from "../../assets/icons/Download_on_the_App_Store_Badge.svg";
 
 function Footer() {
   const currYear = new Date().getFullYear();
