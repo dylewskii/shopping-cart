@@ -59,10 +59,11 @@
   padding: 1rem 2rem;
 }
 
-.iconBox {
+.searchIconBox {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  justify-self: flex-start;
 }
 
 .closeIcon {
@@ -70,11 +71,22 @@
   cursor: pointer;
 }
 
-.cartBox,
+.cartIconBox {
+  display: flex;
+  align-items: center;
+  justify-self: flex-end;
+}
+
+.cartIconBox,
 .closeBox {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+}
+
+.searchIconBox,
+.cartIconBox {
+  width: fit-content;
 }
 
 .cartLink {
@@ -149,8 +161,8 @@
 }
 
 @media (min-width: 800px) {
-  .iconBox,
-  .cartBox {
+  .searchIconBox,
+  .cartIconBox {
     grid-column: 3;
     grid-row: 1;
     display: flex;
@@ -158,8 +170,9 @@
     align-items: center;
   }
 
-  .iconBox {
+  .searchIconBox {
     margin-right: 3rem;
+    justify-self: flex-end;
   }
 
   .headingBox {

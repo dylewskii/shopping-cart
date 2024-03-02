@@ -90,7 +90,7 @@ export default function Header() {
         </>
       ) : (
         <header className={styles.header}>
-          <div className={styles.iconBox}>
+          <div className={styles.searchIconBox}>
             <IoSearch
               className={`${styles.searchIcon} ${styles.icon}`}
               onClick={handleSearchOpen}
@@ -103,7 +103,7 @@ export default function Header() {
               </Link>
             </h1>
           </div>
-          <div className={styles.cartBox}>
+          <div className={styles.cartIconBox}>
             {cartItems.length === 0 ? (
               <Link to="/cart" className={styles.cartLink}>
                 <RiShoppingBagLine
