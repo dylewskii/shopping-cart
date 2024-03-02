@@ -39,6 +39,8 @@
   text-underline-offset: 5px;
 }
 
+/* --- SEARCH --- */
+
 .searchBox {
   width: 100%;
 }
@@ -88,7 +90,12 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  justify-self: flex-start;
+}
+
+.closeBox {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .closeIcon {
@@ -96,16 +103,11 @@
   cursor: pointer;
 }
 
+/* --- REGULAR HEADER --- */
+
 .cartIconBox {
   display: flex;
-  align-items: center;
   justify-self: flex-end;
-}
-
-.cartIconBox,
-.closeBox {
-  display: flex;
-  justify-content: flex-end;
   align-items: center;
 }
 
