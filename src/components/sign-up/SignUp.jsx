@@ -42,7 +42,10 @@ function SignUp() {
         {invalidInput ? (
           <p className={styles.invalidInput}>Please enter a valid email</p>
         ) : successfulSubmit ? (
-          <p className={styles.validInput}>Thank you for subscribing!</p>
+          <p className={styles.validInput}>
+            Thank you for subscribing! You will receive a confirmation email
+            shortly.
+          </p>
         ) : (
           ""
         )}
