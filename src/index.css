@@ -1,4 +1,8 @@
 /* ------------------- ROOT ------------------- */
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   /* colors */
   --clr-black: hsl(0, 0%, 0%);
@@ -122,5 +126,3 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
-
-/* ------------------- MEDIA ------------------- */
