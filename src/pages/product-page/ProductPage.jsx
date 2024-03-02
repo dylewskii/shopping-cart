@@ -53,6 +53,7 @@ export default function ProductPage() {
         />
         <ProductExpanded.AddToCart
           handleAddToCart={() => handleAddToCart(targetProduct)}
+          selectedSize={selectedSize}
         />
       </ProductExpanded>
     </section>
