@@ -12,7 +12,7 @@ export default function ProductExpanded({ children }) {
 ProductExpanded.ProductImage = ({ src, alt }) => {
   return (
     <div className={styles.productImageWrapper}>
-      <img src={src} alt={alt} />
+      <img src={src} alt={alt} className={styles.productImage} />
     </div>
   );
 };

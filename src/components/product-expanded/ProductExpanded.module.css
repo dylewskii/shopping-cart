@@ -7,9 +7,14 @@
 /* --- BASE --- */
 .productImageWrapper {
   width: 100%;
-  min-height: 60dvh;
-  background-color: var(--clr-primary);
+  max-width: 85dvh;
+  min-height: 40dvh;
+  background-color: var(--clr-white);
   object-fit: cover;
+}
+
+.productImage {
+  width: 100%;
 }
 
 .title {
@@ -29,7 +34,7 @@
 .sizingBoxHeader,
 .sizingBox,
 .addToCartBox {
-  margin: 1rem;
+  margin: 1rem 2rem;
 }
 
 .sizingBoxHeader {
@@ -79,4 +84,11 @@
 
 .addToCartBtn:hover {
   opacity: 0.8;
+}
+
+@media (min-width: 800px) {
+  .productImageWrapper {
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
 }
