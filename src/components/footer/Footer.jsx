@@ -23,7 +23,7 @@ function Footer() {
             <li>
               <Link
                 to="/shop"
-                onClick={window.scrollTo({ top: 0, behavior: "smooth" })}
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               >
                 Shop
               </Link>
