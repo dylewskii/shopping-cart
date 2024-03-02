@@ -23,18 +23,6 @@ export default function Header() {
     setSearchOpen(!searchOpen);
   };
 
-  // const shopSearch = () => {
-  //   return shopData
-  //     .filter((item) => item.description.toLowerCase().includes(query))
-  //     .map((item) => <div key={item.id}>{item.description}</div>);
-  // };
-
-  // const blogSearch = () => {
-  //   return blogData
-  //     .filter((blog) => blog.description.toLowerCase().includes(query))
-  //     .map((blog) => <div key={blog.id}>{blog.description}</div>);
-  // };
-
   return (
     <>
       {searchOpen ? (
@@ -64,28 +52,32 @@ export default function Header() {
 
           <div className={styles.productSearchResultsBox}>
             <p className={styles.searchHeading}>Products</p>
-            <div className={styles.shopSearchResults}>
+            <ul className={styles.shopSearchResults}>
               {shopData
                 .filter((item) =>
                   item.description.toLowerCase().includes(query)
                 )
                 .map((item) => (
-                  <div key={item.id}>{item.description}</div>
+                  <li key={item.id} className={styles.searchResultItem}>
+                    {`${item.brand} - ${item.description} (${item.color})`}
+                  </li>
                 ))}
-            </div>
+            </ul>
           </div>
 
           <div className={styles.blogSearchResultsBox}>
             <p className={styles.searchHeading}>Blogs</p>
-            <div className={styles.blogSearchResults}>
+            <ul className={styles.blogSearchResults}>
               {blogData
                 .filter((blog) =>
                   blog.description.toLowerCase().includes(query)
                 )
                 .map((blog) => (
-                  <div key={blog.id}>{blog.description}</div>
+                  <li key={blog.id} className={styles.searchResultItem}>
+                    {blog.description}
+                  </li>
                 ))}
-            </div>
+            </ul>
           </div>
         </>
       ) : (
