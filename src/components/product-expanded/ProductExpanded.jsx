@@ -57,23 +57,28 @@ ProductExpanded.Sizing = ({ handleSizeSelection, selectedSize }) => {
   );
 };
 
-ProductExpanded.AddToCart = ({ handleAddToCart }) => {
+ProductExpanded.AddToCart = ({ handleAddToCart, selectedSize }) => {
   const [loading, setLoading] = useState(false);
+  const [buttonClicked, setButtonClicked] = useState(false);
+
+  const handleClick = () => {
+    if (!selectedSize) {
+      setButtonClicked(true);
+      return;
+    }
+
+    setLoading(true);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    setTimeout(() => {
+      handleAddToCart();
+      setLoading(false);
+    }, 1000);
+  };
+
   return (
     <div className={styles.addToCartBox}>
-      <button
-        onClick={() => {
-          setLoading(true);
-          setTimeout(() => {
-            handleAddToCart();
-            setLoading(false);
-          }, 1000);
-        }}
-        className={styles.addToCartBtn}
-      >
-        {!loading ? (
-          "Add To Cart"
-        ) : (
+      <button onClick={handleClick} className={styles.addToCartBtn}>
+        {loading ? (
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="1em"
@@ -115,6 +120,10 @@ ProductExpanded.AddToCart = ({ handleAddToCart }) => {
               />
             </circle>
           </svg>
+        ) : buttonClicked && !selectedSize ? (
+          "Please select a size"
+        ) : (
+          "Add To Cart"
         )}
       </button>
     </div>
@@ -135,7 +144,10 @@ ProductExpanded.Sizing.propTypes = {
   handleSizeSelection: PropTypes.func,
   selectedSize: PropTypes.number,
 };
-ProductExpanded.AddToCart.propTypes = { handleAddToCart: PropTypes.func };
+ProductExpanded.AddToCart.propTypes = {
+  handleAddToCart: PropTypes.func,
+  selectedSize: PropTypes.number,
+};
 
 // Display Names
 ProductExpanded.displayName = "ProductExpanded";
