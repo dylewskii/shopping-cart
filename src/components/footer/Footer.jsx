@@ -21,12 +21,18 @@ function Footer() {
               <Link to="/">About Us</Link>
             </li>
             <li>
-              <Link to="/shop" onClick={() => window.scroll(0, 0)}>
+              <Link
+                to="/shop"
+                onClick={window.scrollTo({ top: 0, behavior: "smooth" })}
+              >
                 Shop
               </Link>
             </li>
             <li>
-              <Link to="/discover" onClick={() => window.scroll(0, 0)}>
+              <Link
+                to="/discover"
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              >
                 Discover
               </Link>
             </li>
