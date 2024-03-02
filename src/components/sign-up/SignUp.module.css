@@ -54,6 +54,14 @@
   text-decoration: underline;
 }
 
+.signUpBox p.invalidInput {
+  color: red;
+}
+
+.signUpBox p.validInput {
+  color: green;
+}
+
 @media (min-width: 700px) {
   .signUpBox {
     justify-content: flex-start;
