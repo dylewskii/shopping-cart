@@ -8,10 +8,9 @@
 .productExpanded {
   display: flex;
   flex-direction: column;
-  margin: 2rem;
 }
 
-.productDetails {
+.productContent {
   margin: 2rem;
 }
 
@@ -44,7 +43,7 @@
 .sizingBoxHeader,
 .sizingBox,
 .addToCartBox {
-  margin: 1rem 2rem;
+  margin: 1rem 0;
 }
 
 .sizingBoxHeader {
@@ -104,8 +103,29 @@
 
   .productExpanded {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1.5fr 1fr;
     margin: 2rem;
+  }
+
+  .productImageWrapper {
+    grid-column: 1;
+    margin-bottom: 4rem;
+  }
+
+  .productImage {
+    max-height: 100%;
+  }
+
+  .productContent {
+    grid-column: 2;
+    margin: 1rem;
+  }
+
+  .sizingBoxHeader {
+    margin-top: 4rem;
+  }
+
+  .addToCartBox {
+    margin-top: 4rem;
   }
 }
