@@ -54,6 +54,9 @@ export default function ProductPage() {
             handleAddToCart={() => handleAddToCart(targetProduct)}
             selectedSize={selectedSize}
           />
+          <ProductExpanded.Overview>
+            {targetProduct.overview}
+          </ProductExpanded.Overview>
         </ProductExpanded.Content>
       </ProductExpanded>
     </section>

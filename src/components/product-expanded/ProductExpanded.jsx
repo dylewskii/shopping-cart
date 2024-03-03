@@ -61,6 +61,14 @@ ProductExpanded.Sizing = ({ handleSizeSelection, selectedSize }) => {
   );
 };
 
+ProductExpanded.Overview = ({ children }) => {
+  return (
+    <div className={styles.productOverview}>
+      <p>{children}</p>
+    </div>
+  );
+};
+
 ProductExpanded.AddToCart = ({ handleAddToCart, selectedSize }) => {
   const [loading, setLoading] = useState(false);
   const [buttonClicked, setButtonClicked] = useState(false);
@@ -77,14 +85,6 @@ ProductExpanded.AddToCart = ({ handleAddToCart, selectedSize }) => {
       handleAddToCart();
       setLoading(false);
     }, 1000);
-  };
-
-  ProductExpanded.Overview = ({ children }) => {
-    return (
-      <div className={styles.productOverview}>
-        <p>{children}</p>
-      </div>
-    );
   };
 
   return (
