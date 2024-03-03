@@ -1,6 +1,6 @@
 // react
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import PropTypes from "prop-types";
 import CartContext from "../../context/CartContext";
 // css
@@ -13,6 +13,7 @@ import shopData from "../../data/shopData.json";
 import blogData from "../../data/blogData.json";
 
 export default function Header() {
+  const location = useLocation();
   const { cartItems } = useContext(CartContext);
   const [query, setQuery] = useState("");
   const [searchOpen, setSearchOpen] = useState(false);
@@ -58,9 +59,11 @@ export default function Header() {
                   item.description.toLowerCase().includes(query)
                 )
                 .map((item) => (
-                  <li key={item.id} className={styles.searchResultItem}>
-                    {`${item.brand} - ${item.description} (${item.color})`}
-                  </li>
+                  <Link key={item.id} to={`/product/${item.id}`} exact>
+                    <li className={styles.searchResultItem}>
+                      {`${item.brand} - ${item.description} (${item.color})`}
+                    </li>
+                  </Link>
                 ))}
             </ul>
           </div>
@@ -73,9 +76,15 @@ export default function Header() {
                   blog.description.toLowerCase().includes(query)
                 )
                 .map((blog) => (
-                  <li key={blog.id} className={styles.searchResultItem}>
-                    {blog.description}
-                  </li>
+                  <>
+                    {location.pathname !== "/discover" && (
+                      <Link key={blog.id} to={`discover`}>
+                        <li className={styles.searchResultItem}>
+                          {blog.description}
+                        </li>
+                      </Link>
+                    )}
+                  </>
                 ))}
             </ul>
           </div>
