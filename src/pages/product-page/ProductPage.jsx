@@ -38,7 +38,7 @@ export default function ProductPage() {
           src={`/${targetProduct.src.front}`}
           alt={targetProduct.alt}
         />
-        <ProductExpanded.Details>
+        <ProductExpanded.Content>
           <ProductExpanded.Title>{targetProduct.brand}</ProductExpanded.Title>
           <ProductExpanded.Description>
             {targetProduct.description} - {targetProduct.color}
@@ -46,15 +46,15 @@ export default function ProductPage() {
           <ProductExpanded.Price>
             {formatCurrency(targetProduct.price)}
           </ProductExpanded.Price>
-        </ProductExpanded.Details>
-        <ProductExpanded.Sizing
-          handleSizeSelection={handleSizeSelection}
-          selectedSize={selectedSize}
-        />
-        <ProductExpanded.AddToCart
-          handleAddToCart={() => handleAddToCart(targetProduct)}
-          selectedSize={selectedSize}
-        />
+          <ProductExpanded.Sizing
+            handleSizeSelection={handleSizeSelection}
+            selectedSize={selectedSize}
+          />
+          <ProductExpanded.AddToCart
+            handleAddToCart={() => handleAddToCart(targetProduct)}
+            selectedSize={selectedSize}
+          />
+        </ProductExpanded.Content>
       </ProductExpanded>
     </section>
   );
