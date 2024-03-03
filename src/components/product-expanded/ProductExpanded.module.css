@@ -95,6 +95,12 @@
   opacity: 0.8;
 }
 
+.productOverview {
+  margin-top: 2rem;
+  padding: 1rem 0;
+  border-top: 1px solid var(--clr-black);
+}
+
 @media (min-width: 800px) {
   .productImageWrapper {
     margin: 0 auto;
@@ -127,11 +133,5 @@
 
   .addToCartBox {
     margin-top: 1rem;
-  }
-
-  .productOverview {
-    margin-top: 2rem;
-    padding: 1rem 0;
-    border-top: 1px solid var(--clr-black);
   }
 }
