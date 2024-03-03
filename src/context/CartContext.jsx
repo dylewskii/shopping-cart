@@ -12,12 +12,16 @@ export const CartProvider = ({ children }) => {
   };
 
   const handleAddToCart = (productObject) => {
-    const newItem = { ...productObject, size: selectedSize };
+    const newItem = {
+      ...productObject,
+      size: selectedSize,
+      cartId: crypto.randomUUID(),
+    };
     setCartItems([...cartItems, newItem]);
   };
 
-  const handleRemoveFromCart = (productId) => {
-    const updatedCartItems = cartItems.filter((item) => item.id !== productId);
+  const handleRemoveFromCart = (cartId) => {
+    const updatedCartItems = cartItems.filter((item) => item.cartId !== cartId);
     setCartItems(updatedCartItems);
   };
 

@@ -33,8 +33,8 @@ export default function CartPage() {
               </p>
             </header>
             <div className={styles.cartItems}>
-              {cartItems.map((cartItem) => (
-                <CartItem key={cartItem.id}>
+              {cartItems.map((cartItem, i) => (
+                <CartItem key={i}>
                   <CartItem.ProductImage
                     src={cartItem.src?.front}
                     alt={cartItem.alt}
@@ -48,7 +48,7 @@ export default function CartPage() {
                     <CartItem.Size>Size: {cartItem.size}</CartItem.Size>
                     <CartItem.RemoveBtn
                       handleRemoveFromCart={() =>
-                        handleRemoveFromCart(cartItem.id)
+                        handleRemoveFromCart(cartItem.cartId)
                       }
                     >
                       Remove
