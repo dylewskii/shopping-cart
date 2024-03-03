@@ -12,8 +12,8 @@ export const CartProvider = ({ children }) => {
   };
 
   const handleAddToCart = (productObject) => {
-    productObject.size = selectedSize;
-    setCartItems([...cartItems, productObject]);
+    const newItem = { ...productObject, size: selectedSize };
+    setCartItems([...cartItems, newItem]);
   };
 
   const handleRemoveFromCart = (productId) => {
