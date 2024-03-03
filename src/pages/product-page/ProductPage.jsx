@@ -9,6 +9,8 @@ import styles from "./ProductPage.module.css";
 import shopData from "../../data/shopData.json";
 // utils
 import formatCurrency from "../../utils/formatCurrency";
+// icons
+import { IoReturnDownBackSharp } from "react-icons/io5";
 
 export default function ProductPage() {
   const { productId } = useParams();
@@ -50,6 +52,10 @@ export default function ProductPage() {
             handleSizeSelection={handleSizeSelection}
             selectedSize={selectedSize}
           />
+          <p className={styles.returnsBox}>
+            <IoReturnDownBackSharp className={styles.icon} />
+            14 day free returns worldwide
+          </p>
           <ProductExpanded.AddToCart
             handleAddToCart={() => handleAddToCart(targetProduct)}
             selectedSize={selectedSize}
