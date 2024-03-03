@@ -5,6 +5,16 @@
 }
 
 /* --- BASE --- */
+.productExpanded {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+}
+
+.productDetails {
+  margin: 2rem;
+}
+
 .productImageWrapper {
   width: 100%;
   max-width: 85dvh;
@@ -90,5 +100,12 @@
   .productImageWrapper {
     margin: 0 auto;
     padding: 0 1rem;
+  }
+
+  .productExpanded {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin: 2rem;
   }
 }

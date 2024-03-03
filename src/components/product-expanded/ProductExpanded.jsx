@@ -6,7 +6,7 @@ import styles from "./ProductExpanded.module.css";
 import { useState } from "react";
 
 export default function ProductExpanded({ children }) {
-  return <div>{children}</div>;
+  return <div className={styles.ProductExpanded}>{children}</div>;
 }
 
 ProductExpanded.ProductImage = ({ src, alt }) => {
@@ -15,6 +15,10 @@ ProductExpanded.ProductImage = ({ src, alt }) => {
       <img src={src} alt={alt} className={styles.productImage} />
     </div>
   );
+};
+
+ProductExpanded.Details = ({ children }) => {
+  return <div className={styles.productDetails}>{children}</div>;
 };
 
 ProductExpanded.Title = ({ children }) => {
@@ -137,6 +141,7 @@ ProductExpanded.ProductImage.propTypes = {
   src: PropTypes.string,
   alt: PropTypes.string,
 };
+ProductExpanded.Details.propTypes = { children: PropTypes.node };
 ProductExpanded.Title.propTypes = { children: PropTypes.node };
 ProductExpanded.Description.propTypes = { children: PropTypes.node };
 ProductExpanded.Price.propTypes = { children: PropTypes.node };
@@ -152,6 +157,7 @@ ProductExpanded.AddToCart.propTypes = {
 // Display Names
 ProductExpanded.displayName = "ProductExpanded";
 ProductExpanded.ProductImage.displayName = "ProductExpanded.ProductImage";
+ProductExpanded.Details.displayName = "ProductExpanded.Details";
 ProductExpanded.Title.displayName = "ProductExpanded.Title";
 ProductExpanded.Description.displayName = "ProductExpanded.Description";
 ProductExpanded.Price.displayName = "ProductExpanded.Price";

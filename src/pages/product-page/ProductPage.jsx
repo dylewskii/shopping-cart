@@ -38,7 +38,7 @@ export default function ProductPage() {
           src={`/${targetProduct.src.front}`}
           alt={targetProduct.alt}
         />
-        <div className={styles.detailsBox}>
+        <ProductExpanded.Details>
           <ProductExpanded.Title>{targetProduct.brand}</ProductExpanded.Title>
           <ProductExpanded.Description>
             {targetProduct.description} - {targetProduct.color}
@@ -46,7 +46,7 @@ export default function ProductPage() {
           <ProductExpanded.Price>
             {formatCurrency(targetProduct.price)}
           </ProductExpanded.Price>
-        </div>
+        </ProductExpanded.Details>
         <ProductExpanded.Sizing
           handleSizeSelection={handleSizeSelection}
           selectedSize={selectedSize}
