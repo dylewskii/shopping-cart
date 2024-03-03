@@ -36,7 +36,7 @@ export default function CartPage() {
               {cartItems.map((cartItem) => (
                 <CartItem key={cartItem.id}>
                   <CartItem.ProductImage
-                    src={cartItem.src.front}
+                    src={cartItem.src?.front}
                     alt={cartItem.alt}
                   />
                   <CartItem.Info>
