@@ -18,6 +18,7 @@ export const CartProvider = ({ children }) => {
       cartId: crypto.randomUUID(),
     };
     setCartItems([...cartItems, newItem]);
+    setSelectedSize(null);
   };
 
   const handleRemoveFromCart = (cartId) => {
