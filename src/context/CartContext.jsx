@@ -15,9 +15,10 @@ export const CartProvider = ({ children }) => {
     productObject.size = selectedSize;
     setCartItems([...cartItems, productObject]);
   };
+
   const handleRemoveFromCart = (productId) => {
     const updatedCartItems = cartItems.filter((item) => item.id !== productId);
-    setCartItems([...cartItems, updatedCartItems]);
+    setCartItems(updatedCartItems);
   };
 
   return (
