@@ -52,14 +52,14 @@ export default function ProductPage() {
             handleSizeSelection={handleSizeSelection}
             selectedSize={selectedSize}
           />
-          <p className={styles.returnsBox}>
-            <IoReturnDownBackSharp className={styles.icon} />
-            14 day free returns worldwide
-          </p>
           <ProductExpanded.AddToCart
             handleAddToCart={() => handleAddToCart(targetProduct)}
             selectedSize={selectedSize}
           />
+          <p className={styles.returnsBox}>
+            <IoReturnDownBackSharp className={styles.icon} />
+            14 day free returns worldwide
+          </p>
           <ProductExpanded.Overview>
             {targetProduct.overview}
           </ProductExpanded.Overview>
