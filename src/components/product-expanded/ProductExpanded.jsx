@@ -79,6 +79,14 @@ ProductExpanded.AddToCart = ({ handleAddToCart, selectedSize }) => {
     }, 1000);
   };
 
+  ProductExpanded.Overview = ({ children }) => {
+    return (
+      <div className={styles.productOverview}>
+        <p>{children}</p>
+      </div>
+    );
+  };
+
   return (
     <div className={styles.addToCartBox}>
       <button onClick={handleClick} className={styles.addToCartBtn}>
@@ -153,6 +161,7 @@ ProductExpanded.AddToCart.propTypes = {
   handleAddToCart: PropTypes.func,
   selectedSize: PropTypes.number,
 };
+ProductExpanded.Overview.propTypes = { children: PropTypes.node };
 
 // Display Names
 ProductExpanded.displayName = "ProductExpanded";
@@ -163,3 +172,4 @@ ProductExpanded.Description.displayName = "ProductExpanded.Description";
 ProductExpanded.Price.displayName = "ProductExpanded.Price";
 ProductExpanded.Sizing.displayName = "ProductExpanded.Sizing";
 ProductExpanded.AddToCart.displayName = "ProductExpanded.AddToCart";
+ProductExpanded.Overview.displayName = "ProductExpanded.Overview";
