@@ -59,7 +59,12 @@ export default function Header() {
                   item.description.toLowerCase().includes(query)
                 )
                 .map((item) => (
-                  <Link key={item.id} to={`/product/${item.id}`} exact>
+                  <Link
+                    key={item.id}
+                    to={`/product/${item.id}`}
+                    onClick={handleSearchOpen}
+                    exact
+                  >
                     <li className={styles.searchResultItem}>
                       {`${item.brand} - ${item.description} (${item.color})`}
                     </li>
@@ -78,7 +83,12 @@ export default function Header() {
                 .map((blog) => (
                   <>
                     {location.pathname !== "/discover" && (
-                      <Link key={blog.id} to={`discover`}>
+                      <Link
+                        key={blog.id}
+                        to={`/discover`}
+                        onClick={handleSearchOpen}
+                        exact
+                      >
                         <li className={styles.searchResultItem}>
                           {blog.description}
                         </li>
