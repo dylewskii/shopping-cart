@@ -13,7 +13,9 @@ function Footer() {
       <div className={styles.footerTop}>
         <div className={styles.appBox}>
           <h5>Continue Shopping With Our Brand New App</h5>
-          <img className={styles.appBadge} src={iosBadge}></img>
+          <a href="https://www.apple.com/uk">
+            <img className={styles.appBadge} src={iosBadge} />
+          </a>
         </div>
         <div className={styles.glossaryBox}>
           <ul>
