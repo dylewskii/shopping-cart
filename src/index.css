@@ -109,7 +109,11 @@ a {
   cursor: pointer;
 }
 
-a:visited {
+a:visited,
+a:link,
+a:hover,
+a:active,
+a:-webkit-any-link {
   color: var(--clr-black);
 }
 
