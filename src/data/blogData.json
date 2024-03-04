@@ -4,20 +4,20 @@
     "alt": "An airplane seat with the eating tray folded down",
     "title": "Jet-Set-Chic",
     "description": "Essential Luxuries for the Fashion Nomad",
-    "src": "/public/images/blogs/airplane-seat.webp"
+    "src": "/images/blogs/airplane-seat.webp"
   },
   {
     "id": 2,
     "alt": "A group of people playing a tennis game",
     "title": "Athletic Elegance",
     "description": "How Athleisure Took Over the Runway",
-    "src": "/public/images/blogs/tennis-game.webp"
+    "src": "/images/blogs/tennis-game.webp"
   },
   {
     "id": 3,
     "alt": "A Cartier store",
     "title": "From Corsets to Couture",
     "description": "A Fascinating Look Back at Fashion History Through the Ages",
-    "src": "/public/images/blogs/cartier-store.webp"
+    "src": "/images/blogs/cartier-store.webp"
   }
 ]

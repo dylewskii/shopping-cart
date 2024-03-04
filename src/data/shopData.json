@@ -8,9 +8,9 @@
     "price": "100.00",
     "inStock": true,
     "src": {
-      "left": "/public//images/shoes/air-force-1-black-1.webp",
-      "right": "/public/images/shoes/air-force-1-black-2.webp",
-      "front": "/public/images/shoes/air-force-1-black-3.webp"
+      "left": "/images/shoes/air-force-1-black-1.webp",
+      "right": "/images/shoes/air-force-1-black-2.webp",
+      "front": "/images/shoes/air-force-1-black-3.webp"
     },
     "overview": "The radiance lives on in the Nike Air Force 1 '07, the basketball original that puts a fresh spin on what you know best: durably stitched overlays, clean finishes and the perfect amount of flash to make you shine."
   },
@@ -23,9 +23,9 @@
     "price": "100.00",
     "inStock": true,
     "src": {
-      "left": "/public/images/shoes/air-force-1-white-1.webp",
-      "right": "/public/images/shoes/air-force-1-white-2.webp",
-      "front": "/public/images/shoes/air-force-1-white-3.webp"
+      "left": "/images/shoes/air-force-1-white-1.webp",
+      "right": "/images/shoes/air-force-1-white-2.webp",
+      "front": "/images/shoes/air-force-1-white-3.webp"
     },
     "overview": "The radiance lives on in the Nike Air Force 1 '07, the basketball original that puts a fresh spin on what you know best: durably stitched overlays, clean finishes and the perfect amount of flash to make you shine."
   },
@@ -38,9 +38,9 @@
     "price": "90.00",
     "inStock": true,
     "src": {
-      "left": "/public/images/shoes/dunk-low-green-1.webp",
-      "right": "/public/images/shoes/dunk-low-green-2.webp",
-      "front": "/public/images/shoes/dunk-low-green-3.webp"
+      "left": "/images/shoes/dunk-low-green-1.webp",
+      "right": "/images/shoes/dunk-low-green-2.webp",
+      "front": "/images/shoes/dunk-low-green-3.webp"
     },
     "overview": "Created for the hardwood but taken to the streets, the Nike Dunk Low Retro returns with crisp overlays and original team colours. This basketball icon channels '80s vibes with premium leather in the upper that looks good and breaks in even better. Modern footwear technology helps bring the comfort into the 21st century."
   },
@@ -53,9 +53,9 @@
     "price": "120.00",
     "inStock": true,
     "src": {
-      "left": "/public/images/shoes/dunk-low-orangeblack-1.webp",
-      "right": "/public/images/shoes/dunk-low-orangeblack-2.webp",
-      "front": "/public/images/shoes/dunk-low-orangeblack-3.webp"
+      "left": "/images/shoes/dunk-low-orangeblack-1.webp",
+      "right": "/images/shoes/dunk-low-orangeblack-2.webp",
+      "front": "/images/shoes/dunk-low-orangeblack-3.webp"
     },
     "overview": "Created for the hardwood but taken to the streets, the Nike Dunk Low Retro returns with crisp overlays and original team colours. This basketball icon channels '80s vibes with premium leather in the upper that looks good and breaks in even better. Modern footwear technology helps bring the comfort into the 21st century."
   },
@@ -68,9 +68,9 @@
     "price": "120.00",
     "inStock": true,
     "src": {
-      "left": "/public/images/shoes/blazer-low-77-jumbo-1.webp",
-      "right": "/public/images/shoes/blazer-low-77-jumbo-2.webp",
-      "front": "/public/images/shoes/blazer-low-77-jumbo-3.webp"
+      "left": "/images/shoes/blazer-low-77-jumbo-1.webp",
+      "right": "/images/shoes/blazer-low-77-jumbo-2.webp",
+      "front": "/images/shoes/blazer-low-77-jumbo-3.webp"
     },
     "overview": "They say, 'Don't fix what works'. We say, 'Perfect it'. The classic, streetwear superstar gets rethought with the Nike Blazer Low '77 Jumbo. Harnessing the old-school look you love, it now features an oversized Swoosh design and jumbo laces. Its plush foam tongue and thicker stitching embolden the iconic look that's been praised by the streets since '77."
   },
@@ -83,9 +83,9 @@
     "price": "120.00",
     "inStock": true,
     "src": {
-      "left": "/public/images/shoes/air-max-1-grey-1.webp",
-      "right": "/public/images/shoes/air-max-1-grey-2.webp",
-      "front": "/public/images/shoes/air-max-1-grey-3.webp"
+      "left": "/images/shoes/air-max-1-grey-1.webp",
+      "right": "/images/shoes/air-max-1-grey-2.webp",
+      "front": "/images/shoes/air-max-1-grey-3.webp"
     },
     "overview": "Meet the leader of the pack. Walking on clouds above the noise, the Air Max 1 blends timeless design with cushioned comfort. Sporting a fast-paced look, wavy mudguard and Nike Air, this classic icon hit the scene in '87 and continues to be the soul of the franchise today."
   },
@@ -98,9 +98,9 @@
     "price": "120.00",
     "inStock": true,
     "src": {
-      "left": "/public/images/shoes/air-max-1-whiteblack-1.webp",
-      "right": "/public/images/shoes/air-max-1-whiteblack-2.webp",
-      "front": "/public/images/shoes/air-max-1-whiteblack-3.webp"
+      "left": "/images/shoes/air-max-1-whiteblack-1.webp",
+      "right": "/images/shoes/air-max-1-whiteblack-2.webp",
+      "front": "/images/shoes/air-max-1-whiteblack-3.webp"
     },
     "overview": "Meet the leader of the pack. Walking on clouds above the noise, the Air Max 1 blends timeless design with cushioned comfort. Sporting a fast-paced look, wavy mudguard and Nike Air, this classic icon hit the scene in '87 and continues to be the soul of the franchise today."
   },
@@ -113,9 +113,9 @@
     "price": "120.00",
     "inStock": true,
     "src": {
-      "left": "/public/images/shoes/zoom-vomero-5-black-1.webp",
-      "right": "/public/images/shoes/zoom-vomero-5-black-1.webp",
-      "front": "/public/images/shoes/zoom-vomero-5-black-1.webp"
+      "left": "/images/shoes/zoom-vomero-5-black-1.webp",
+      "right": "/images/shoes/zoom-vomero-5-black-1.webp",
+      "front": "/images/shoes/zoom-vomero-5-black-1.webp"
     },
     "overview": "The Vomero 5 takes early-2000s running to modern heights. A combination of breathable and durable materials stands ready for the rigours of your day, while Zoom Air cushioning delivers a smooth ride."
   },
@@ -128,9 +128,9 @@
     "price": "120.00",
     "inStock": true,
     "src": {
-      "left": "/public/images/shoes/zoom-vomero-5-white-1.webp",
-      "right": "/public/images/shoes/zoom-vomero-5-white-1.webp",
-      "front": "/public/images/shoes/zoom-vomero-5-white-1.webp"
+      "left": "/images/shoes/zoom-vomero-5-white-1.webp",
+      "right": "/images/shoes/zoom-vomero-5-white-1.webp",
+      "front": "/images/shoes/zoom-vomero-5-white-1.webp"
     },
     "overview": "The Vomero 5 takes early-2000s running to modern heights. A combination of breathable and durable materials stands ready for the rigours of your day, while Zoom Air cushioning delivers a smooth ride."
   },
@@ -143,9 +143,9 @@
     "price": "120.00",
     "inStock": true,
     "src": {
-      "left": "/public/images/shoes/v2k-white-1.webp",
-      "right": "/public/images/shoes/v2k-white-2.webp",
-      "front": "/public/images/shoes/v2k-white-3.webp"
+      "left": "/images/shoes/v2k-white-1.webp",
+      "right": "/images/shoes/v2k-white-2.webp",
+      "front": "/images/shoes/v2k-white-3.webp"
     },
     "overview": "Fast forward. Rewind. Doesn't matter—this shoe takes retro into the future. The V2K remasters everything you love about the Vomero in a look pulled straight from an early '00s running catalogue. Layer up in a mixture of flashy metallics, referential plastic details and a midsole with a perfectly vintage aesthetic. And the chunky heel makes sure wherever you go, it's in comfort."
   }
