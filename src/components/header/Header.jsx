@@ -110,7 +110,7 @@ export default function Header() {
           <div className={styles.headingBox}>
             <h1>
               <Link to="/" onClick={() => handleLinkClick("home")}>
-                LOREMIPSUM
+                HARAJUKU
               </Link>
             </h1>
           </div>
