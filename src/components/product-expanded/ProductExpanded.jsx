@@ -25,6 +25,7 @@ ProductExpanded.ProductImage = ({ images, alt }) => {
       prevIndex === 0 ? images.length - 1 : prevIndex - 1
     );
   };
+
   return (
     <div className={styles.productImageGallery}>
       <div className={styles.productImageWrapper}>

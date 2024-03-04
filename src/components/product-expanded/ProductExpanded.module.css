@@ -31,8 +31,9 @@
 .prevBtn,
 .nextBtn {
   z-index: 999;
-  position: absolute;
+  height: 100%;
   font-size: 2rem;
+  position: absolute;
   top: 45%;
   transform: translateY(-50%);
   cursor: pointer;
