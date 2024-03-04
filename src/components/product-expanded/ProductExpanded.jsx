@@ -4,15 +4,44 @@ import PropTypes from "prop-types";
 // css
 import styles from "./ProductExpanded.module.css";
 import { useState } from "react";
+// icons
+import { TfiAngleRight, TfiAngleLeft } from "react-icons/tfi";
 
 export default function ProductExpanded({ children }) {
   return <div className={styles.productExpanded}>{children}</div>;
 }
 
-ProductExpanded.ProductImage = ({ src, alt }) => {
+ProductExpanded.ProductImage = ({ images, alt }) => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const nextImage = () => {
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
+  };
   return (
-    <div className={styles.productImageWrapper}>
-      <img src={src} alt={alt} className={styles.productImage} />
+    <div className={styles.productImageGallery}>
+      <div className={styles.productImageWrapper}>
+        <img
+          src={images[currentImageIndex]}
+          alt={alt}
+          className={styles.productImage}
+        />
+      </div>
+      <TfiAngleLeft
+        onClick={prevImage}
+        className={`${styles.galleryBtn} ${styles.prevBtn}`}
+      />
+      <TfiAngleRight
+        onClick={nextImage}
+        className={`${styles.galleryBtn} ${styles.nextBtn}`}
+      />
     </div>
   );
 };
@@ -146,8 +175,8 @@ ProductExpanded.AddToCart = ({ handleAddToCart, selectedSize }) => {
 ProductExpanded.propTypes = { children: PropTypes.node };
 ProductExpanded.ProductImage.propTypes = {
   children: PropTypes.node,
-  src: PropTypes.string,
-  alt: PropTypes.string,
+  images: PropTypes.arrayOf(PropTypes.string).isRequired,
+  alt: PropTypes.string.isRequired,
 };
 ProductExpanded.Content.propTypes = { children: PropTypes.node };
 ProductExpanded.Title.propTypes = { children: PropTypes.node };
