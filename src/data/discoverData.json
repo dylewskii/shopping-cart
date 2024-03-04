@@ -4,34 +4,34 @@
     "alt": "Shoes tied to an electricity line",
     "name": "Limited Sneakers",
     "description": "Only the Rarest",
-    "src": "/assets/images/homepage/orange-jordans-in-air.webp"
+    "src": "/src/assets/images/homepage/orange-jordans-in-air.webp"
   },
   {
     "id": 2,
     "alt": "Person laying with their shoes up",
     "name": "Walking Shoes",
     "description": "Stride Comfortably",
-    "src": "/assets/images/homepage/upside-down-shoes.webp"
+    "src": "/src/assets/images/homepage/upside-down-shoes.webp"
   },
   {
     "id": 3,
     "alt": "Man wearing a fur coat",
     "name": "Coats",
     "description": "Wrap in Style and Warmth",
-    "src": "/assets/images/homepage/fur-coat.webp"
+    "src": "/src/assets/images/homepage/fur-coat.webp"
   },
   {
     "id": 4,
     "alt": "A man wearing a side bag",
     "name": "Bags",
     "description": "For Every Occassion",
-    "src": "/assets/images/homepage/side-bag.webp"
+    "src": "/src/assets/images/homepage/side-bag.webp"
   },
   {
     "id": 5,
     "alt": "A woman with sunglasses walking with her head to the side",
     "name": "Accessories",
     "description": "Accentuate Your Style",
-    "src": "/assets/images/homepage/woman-walking.webp"
+    "src": "/src/assets/images/homepage/woman-walking.webp"
   }
 ]
