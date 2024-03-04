@@ -37,7 +37,11 @@ export default function ProductPage() {
     <section className={styles.productPage}>
       <ProductExpanded>
         <ProductExpanded.ProductImage
-          src={`/${targetProduct.src.front}`}
+          images={[
+            `/${targetProduct.src.front}`,
+            `/${targetProduct.src.left}`,
+            `/${targetProduct.src.right}`,
+          ]}
           alt={targetProduct.alt}
         />
         <ProductExpanded.Content>
