@@ -1,5 +1,5 @@
 import styles from "./Hero.module.css";
-import heroImg from "../../assets/images/homepage/rocky-twins-sat.webp";
+import heroImg from "/public/images/homepage/rocky-twins-sat.webp";
 
 function Hero() {
   const currYear = new Date().getFullYear();

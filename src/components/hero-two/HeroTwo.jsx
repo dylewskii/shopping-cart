@@ -1,5 +1,5 @@
 import styles from "./HeroTwo.module.css";
-import heroTwoImg from "../../assets/images/homepage/rocky-twins-touch.webp";
+import heroTwoImg from "/public/images/homepage/rocky-twins-touch.webp";
 
 function HeroTwo() {
   return (
