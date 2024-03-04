@@ -9,7 +9,7 @@ import "./index.css";
 import Layout from "./Layout.jsx";
 import ShopPage from "./pages/shop-page/ShopPage.jsx";
 import DiscoverPage from "./pages/discover-page/DiscoverPage.jsx";
-import HomePage from "./pages/home-page/HomePage.jsx";
+import HomePage from "./pages/home-page/Homepage.jsx";
 import NotFound from "./pages/not-found/NotFound.jsx";
 import CartPage from "./pages/cart-page/CartPage.jsx";
 import ProductPage from "./pages/product-page/ProductPage.jsx";
