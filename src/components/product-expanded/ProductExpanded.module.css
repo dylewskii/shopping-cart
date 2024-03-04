@@ -110,7 +110,7 @@
   .productExpanded {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
-    margin: 2rem 4rem;
+    margin: 2rem;
   }
 
   .productImageWrapper {
