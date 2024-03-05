@@ -38,9 +38,9 @@ export default function ProductPage() {
       <ProductExpanded>
         <ProductExpanded.ProductImage
           images={[
-            `/${targetProduct.src.front}`,
-            `/${targetProduct.src.left}`,
-            `/${targetProduct.src.right}`,
+            targetProduct.src.front,
+            targetProduct.src.left,
+            targetProduct.src.right,
           ]}
           alt={targetProduct.alt}
         />
