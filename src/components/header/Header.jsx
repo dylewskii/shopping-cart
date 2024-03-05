@@ -1,5 +1,5 @@
 // react
-import { useContext, useState } from "react";
+import { useContext, useState, useMemo } from "react";
 import { Link, useLocation } from "react-router-dom";
 import PropTypes from "prop-types";
 import CartContext from "../../context/CartContext";
@@ -24,6 +24,18 @@ export default function Header() {
     setSearchOpen(!searchOpen);
   };
 
+  const filteredShopItems = useMemo(() => {
+    return shopData.filter((item) =>
+      item.description.toLowerCase().includes(query.toLowerCase())
+    );
+  }, [query]);
+
+  const filteredBlogItems = useMemo(() => {
+    return blogData.filter((blog) =>
+      blog.description.toLowerCase().includes(query.toLowerCase())
+    );
+  }, [query]);
+
   return (
     <>
       {searchOpen ? (
@@ -40,6 +52,7 @@ export default function Header() {
                 type="text"
                 className={styles.searchInput}
                 placeholder="Try searching for products or blogs."
+                value={query}
                 onChange={(e) => setQuery(e.target.value)}
               ></input>
             </div>
@@ -54,48 +67,40 @@ export default function Header() {
           <div className={styles.productSearchResultsBox}>
             <p className={styles.searchHeading}>Products</p>
             <ul className={styles.shopSearchResults}>
-              {shopData
-                .filter((item) =>
-                  item.description.toLowerCase().includes(query)
-                )
-                .map((item) => (
-                  <Link
-                    key={item.id}
-                    to={`/product/${item.id}`}
-                    onClick={handleSearchOpen}
-                    exact
-                  >
-                    <li className={styles.searchResultItem}>
-                      {`${item.brand} - ${item.description} (${item.color})`}
-                    </li>
-                  </Link>
-                ))}
+              {filteredShopItems.map((item) => (
+                <Link
+                  key={item.id}
+                  to={`/product/${item.id}`}
+                  onClick={handleSearchOpen}
+                  exact
+                >
+                  <li className={styles.searchResultItem}>
+                    {`${item.brand} - ${item.description} (${item.color})`}
+                  </li>
+                </Link>
+              ))}
             </ul>
           </div>
 
           <div className={styles.blogSearchResultsBox}>
             <p className={styles.searchHeading}>Blogs</p>
             <ul className={styles.blogSearchResults}>
-              {blogData
-                .filter((blog) =>
-                  blog.description.toLowerCase().includes(query)
-                )
-                .map((blog) => (
-                  <>
-                    {location.pathname !== "/discover" && (
-                      <Link
-                        key={blog.id}
-                        to={`/discover`}
-                        onClick={handleSearchOpen}
-                        exact
-                      >
-                        <li className={styles.searchResultItem}>
-                          {blog.description}
-                        </li>
-                      </Link>
-                    )}
-                  </>
-                ))}
+              {filteredBlogItems.map((blog) => (
+                <>
+                  {location.pathname !== "/discover" && (
+                    <Link
+                      key={blog.id}
+                      to={`/discover`}
+                      onClick={handleSearchOpen}
+                      exact
+                    >
+                      <li className={styles.searchResultItem}>
+                        {blog.description}
+                      </li>
+                    </Link>
+                  )}
+                </>
+              ))}
             </ul>
           </div>
         </>
