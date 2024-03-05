@@ -22,7 +22,7 @@
 }
 
 .cardImage {
-  object-fit: cover;
+  min-height: 250px;
   margin-bottom: 0.5rem;
   transition: transform 0.3s ease;
 }
