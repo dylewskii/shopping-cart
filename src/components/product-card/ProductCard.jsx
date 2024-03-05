@@ -8,7 +8,7 @@ function ProductCard({ children }) {
 ProductCard.ProductImage = ({ src, alt }) => {
   return (
     <div className={styles.cardImageWrapper}>
-      <img className={styles.cardImage} src={src} alt={alt} loading="lazy" />
+      <img className={styles.cardImage} src={src} alt={alt} />
     </div>
   );
 };
