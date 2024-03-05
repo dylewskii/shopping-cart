@@ -41,7 +41,7 @@ export default function Header() {
       {searchOpen ? (
         <>
           <header className={styles.searchHeader}>
-            <div className={styles.searchBox}>
+            <div className={styles.searchIconBox}>
               <IoSearch
                 className={`${styles.searchIcon} ${styles.icon}`}
                 onClick={handleSearchOpen}
